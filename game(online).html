@@ -1,0 +1,1847 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'' });</script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Untitled Document</title> 
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.5.2.js"></script>
+<!--script type="text/javascript" src="js/jquery-ui.js"></script-->
+<script type="text/javascript" src="https://cdn.rawgit.com/RodrigoBS18/Editing_GameGame/master/main.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/RodrigoBS18/Editing_GameGame/master/Jquery-ui.js"></script>
+<!--link href="css/main.css" rel="stylesheet" type="text/css" /-->
+
+ <style type="text/css">
+ 
+ 
+ 
+ 
+ body {
+ 
+ margin:0px;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:13px;
+ color:#000000;
+ overflow:hidden;
+ 
+ }
+ 
+ .visivelSNtxtbox {
+ 
+ visibility: hidden;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ form, h1, h2, h3, h4, h5, img {
+ 
+ margin:0px;
+ padding:0px;
+ border:0px;
+ 
+ }
+ 
+ 
+ .txt_ExitBox {
+ 
+ font-size: 28px;
+ color: black;
+ text-align: center;
+ text-shadow: 5px 5px 10px rgba(255,255,255);
+ font-face:Roboto;
+ }
+ 
+ 
+ .txt_Dificuldade {
+ 
+ text-align:center;
+ font-size:25;
+ color:#00FF7F;
+ font-weight: bold;
+ 
+ }
+ 
+ 
+ .txt_DificuldadeM {
+ 
+ text-align:center;
+ font-size:25;
+ color:Orange;
+ font-weight: bold;
+ 
+ }
+ 
+ 
+ 
+ .txt_DificuldadeH {
+ 
+ text-align:center;
+ font-size:25;
+ color:#FF4500;
+ font-weight: bold;
+ 
+ }
+ 
+ 
+ //EFEITO FLOATING/ EFEITO SCALING
+ 
+ 
+ .floating{
+ float: left;
+ -webkit-animation-name: Floatingx;
+ -webkit-animation-duration: 3s;
+ -webkit-animation-iteration-count: infinite;
+ -webkit-animation-timing-function: ease-in-out;
+ -moz-animation-name: Floating;
+ -moz-animation-duration: 3s;
+ -moz-animation-iteration-count: infinite;
+ -moz-animation-timing-function: ease-in-out;
+ margin-left: 30px;
+ margin-top: 5px;
+ 
+ }
+ 
+ @-webkit-keyframes Floatingx{
+ from {-webkit-transform:translate(0, 0px);}
+ 65% {-webkit-transform:translate(0, 15px);}
+ to {-webkit-transform: translate(0, -0px);    }    
+ }
+ 
+ @-moz-keyframes Floating{
+ from {-moz-transform:translate(0, 0px);}
+ 65% {-moz-transform:translate(0, 15px);}
+ to {-moz-transform: translate(0, -0px);}    
+ }
+ 
+ 
+ .scaling{
+ float: left;
+ -webkit-animation-name: scalex;
+ -webkit-animation-duration:3s;
+ -webkit-animation-iteration-count:infinite;
+ -webkit-animation-timing-function:ease-in-out;
+ -moz-animation-name: scale;
+ -moz-animation-duration:3s;
+ -moz-animation-iteration-count:infinite;
+ -moz-animation-timing-function:ease-in-out;
+ }
+ 
+ @-webkit-keyframes scalex{
+ from {-webkit-transform: scale(0.9);}
+ 65% {-webkit-transform: scale(1.0);}
+ to {-webkit-transform: scale(0.9);}    
+ }
+ 
+ @-moz-keyframes scale{
+ from {-moz-transform: scale(0.9);}
+ 65% {-moz-transform: scale(1.0);}
+ to {-moz-transform: scale(0.9);}    
+ }
+ 
+ 
+ //EFEITO FLOATING/ EFEITO SCALING
+ 
+ 
+ 
+ 
+ .MyPerfil {
+ 
+ font-size: 28px;
+ color: 40,40,40;
+ text-align: center;
+ text-shadow: 5px 5px 10px rgba(0,0,0,.2);
+ }
+ 
+ 
+ .escolheDificuldade {
+ 
+ font-size: 20px;
+ color: #00FF7F;
+ text-align: center;
+ text-shadow: 5px 5px 10px rgba(0,0,0,.2);
+ background-color: transparent;
+ 
+ }
+ 
+ 
+ 
+ .escolheDificuldadeM {
+ 
+ font-size: 20px;
+ color: Orange;
+ text-align: center;
+ text-shadow: 5px 5px 10px rgba(0,0,0,.2);
+ background-color: transparent;
+ 
+ }
+ 
+ 
+ 
+ .escolheDificuldadeH {
+ 
+ font-size: 20px;
+ color: #FF4500;
+ text-align: center;
+ text-shadow: 5px 5px 10px rgba(0,0,0,.2);
+ background-color: transparent;
+ 
+ }
+ 
+ 
+ 
+ html, body {
+ 
+ margin:0px;
+ padding:0px;
+ width:100%;
+ height:100%;
+ 
+ }
+ 
+ .btn_Startjogo
+ {
+ padding: 1px 11px;
+ 
+ border: 1px solid #33E946;
+ -moz-border-radius: 8px;
+ -webkit-border-radius: 8px;
+ border-radius: 8px;
+ /*Os três valores do border determinam, respectivamente: a borda do
+ span deverá ter 1 pixel de espessura; será sólido; será na cor
+ hexadecimal */
+ 
+ background-color: #33E946 !important;
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#33E946), color-stop(100%,#33E946)) !important;
+ background: -webkit-linear-gradient(top, #33E946, #33E946) !important;
+ /*o segundo #33E946 é para ter outra cor que vai ficar meio q na metade do botão*/
+ background: -moz-linear-gradient(top, #33E946, #33E946) !important;
+ background: -ms-linear-gradient(top, #33E946, #33E946) !important;
+ background: -o-linear-gradient(top, #33E946, #33E946) !important;
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33E946', endColorstr='#33E946',GradientType=0 );
+ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmY2MwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjY2MDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+ 
+ font-family:"Segoe UI";
+ font-weight: bold;
+ font-size: 23px;
+ color: #fff;
+ text-shadow: 0 1px 0 #666;
+ 
+ box-shadow: inset 0 1px 1px #fff, 0 2px 3px #666;
+ /*box-shadow é a sombra que tem abaixo do botão*/
+ cursor:pointer;
+ /*cursor pointer é para que apareça à 'maozinha' quando interagir com o mouse no botão!*/
+ position: relative;
+ }
+ 
+ .botao:hover {
+ box-shadow: inset 0 2px 5px #fff, 0 2px 3px #666;
+ background: -webkit-gradient(linear, left top, left bottom, from(#33E946), to(#33E946)) !important;
+ /*Efeito hover de quando passa o mouse em cima do botao*/
+ }
+ 
+ .botao:active {
+ box-shadow: inset 0 2px 5px #fff, 0 1px 3px #666 !important;
+ top:2px
+ /*Efeito active de quando clica no botao*/
+ }
+ .botao a, .botao a:active, .botao a:hover, .botao a:visited { text-decoration:none; color: #fff; text-shadow: 0 1px 0 #666; }
+ /* isso vai ficar assim quando o botao for associado à um link*/
+ 
+ .bluesky {
+ 
+ /*background: rgb(47,169,229); /* Old browsers 
+ /* IE9 SVG, needs conditional override of 'filter' to 'none' 
+ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJmYTllNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZWY5ZmUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+ background: -moz-linear-gradient(top,  rgba(47,169,229,1) 0%, rgba(238,249,254,1) 100%); /* FF3.6+ 
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(47,169,229,1)), color-stop(100%,rgba(238,249,254,1))); /* Chrome,Safari4+ 
+ background: -webkit-linear-gradient(top,  rgba(47,169,229,1) 0%,rgba(238,249,254,1) 100%); /* Chrome10+,Safari5.1+ 
+ background: -o-linear-gradient(top,  rgba(47,169,229,1) 0%,rgba(238,249,254,1) 100%); /* Opera 11.10+ 
+ background: -ms-linear-gradient(top,  rgba(47,169,229,1) 0%,rgba(238,249,254,1) 100%); /* IE10+ 
+ background: linear-gradient(to bottom,  rgba(47,169,229,1) 0%,rgba(238,249,254,1) 100%); /* W3C 
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2fa9e5', endColorstr='#eef9fe',GradientType=0 );*/
+ width:100%;
+ height:100%;
+ overflow:hidden;
+ position:relative;
+ margin:auto;
+ background-color: #6AA0EB;
+ 
+ }
+ 
+ #stage {
+ 
+ width:20000px;
+ position:absolute;
+ left:0px;
+ bottom:0px;
+ height:200px;
+ z-index:8;
+ 
+ }
+ 
+ .mudroadtexture {
+ 
+ background-image:url(https://1.bp.blogspot.com/-rLFS2RhL23A/WoS8yANw36I/AAAAAAAAAQ8/SWpnkhvpPwYnltjUP8JgjwrdYlNI09IxgCLcBGAs/s1600/mudroad.gif);
+ background-repeat:repeat;
+ height:50%;
+ z-index:10;
+ position:absolute;
+ left:0px;
+ bottom:0px;
+ width:2000px;
+ outline:0px;
+ 
+ }
+ 
+ .bridgetexture {
+ 
+ background-image:url(https://3.bp.blogspot.com/-sLYhBrDAd0g/WoS9iz7WEuI/AAAAAAAAARI/gSO1zzr-I6U5k8VTxi0GoWDht_Z0sUYkACLcBGAs/s1600/bridge.gif);
+ background-repeat:repeat;
+ height:50%;
+ z-index:10;
+ position:absolute;
+ left:0px;
+ bottom:0px;
+ width:2000px;
+ outline:0px;
+ 
+ }
+ 
+ .crocodial {
+ 
+ background-image:url(https://3.bp.blogspot.com/-eYWgHfty6O4/WoTRwt4rxgI/AAAAAAAAAR0/L3NSvVzdl90HYxOpqKNVl_VDPscMv6pBQCLcBGAs/s1600/croco.gif);
+ z-index:9;
+ background-repeat:repeat;
+ height:50%;
+ position:absolute;
+ left:0px;
+ bottom:0px;
+ width:200px;
+ outline:0px; 
+ 
+ }
+ 
+ #box {
+ 
+ background-repeat:no-repeat;
+ width:63px;
+ height:90px;
+ 
+ }
+ 
+ .boxpn {
+ 
+ background-repeat:no-repeat;
+ width:63px;
+ height:90px;
+ 
+ }
+ 
+ .waterwarn200 {
+ 
+ width:179px;
+ height:4px;
+ position:absolute;
+ left:9px;
+ bottom:-14px;
+ 
+ }
+ 
+ .grasstree {
+ position:absolute;
+ z-index:6;
+ left:0px;
+ bottom:0px;
+ height:80px;
+ width:20000px;
+ 
+ }
+ 
+ .grass {
+ 
+ height:132px;
+ position:absolute;
+ left:0px;
+ bottom:-66px;
+ background-image:url(https://1.bp.blogspot.com/-NDGGwUebmK4/WoTboexftDI/AAAAAAAAAUI/ZPmCNVAlkYQUVs6eFdddemLuLl25sIwIwCLcBGAs/s1600/grass.png);
+ background-repeat:repeat-x;
+ width:100%;
+ z-index:6;
+ 
+ }
+ 
+ .maintree {
+ 
+ position:absolute;
+ z-index:7;
+ left:0px;
+ bottom:0px;
+ height:80px;
+ width:20000px;
+ 
+ }
+ 
+ .tree1 {
+ 
+ position:absolute;
+ left:755px;
+ bottom:9px;
+ width:186px;
+ height:193px;
+ background-image:url(https://3.bp.blogspot.com/-UlIH_Ma3ypk/WoTeDz-AdyI/AAAAAAAAAU8/XnwhFgGbMYIgmJj9cqQxG4fMoIMq6_a0QCLcBGAs/s1600/tree1.png);
+ 
+ }
+ 
+ .tree2 {
+ position:absolute;
+ left:755px;
+ bottom:4px;
+ width:186px;
+ height:193px;
+ background-image:url(https://3.bp.blogspot.com/-BE29v6fa3VI/WoTeSlkfGEI/AAAAAAAAAVA/R6AxM7PA2uITnQIU2gPVGf0NyB5acEBagCLcBGAs/s1600/tree2.png);
+ 
+ }
+ 
+ .seenlayer {
+ 
+ height:300px;
+ position:absolute;
+ left:0px;
+ bottom:0px;
+ width:20000px;
+ z-index:1;
+ 
+ }
+ 
+ .kutubminar {
+ 
+ width:591px;
+ height:300px;
+ background-image:url(https://2.bp.blogspot.com/-U0RLcVgbD4g/WoTcTpy4MiI/AAAAAAAAAUc/ZWVAQPHhPjskFhnjvdlARwPqy3et7kg1wCLcBGAs/s1600/kutubminar.png);
+ left:1100px;
+ position:absolute;
+ bottom:80px;
+ 
+ }
+ 
+ .enmybox {
+ 
+ position:absolute;
+ z-index:80;
+ left:0px;
+ bottom:0px;
+ height:300px;
+ width:20000px;
+ 
+ }
+ 
+ 
+ .playerName {
+ 
+ font-size: 28px;
+ color: 40,40,40;
+ text-align: center;
+ text-shadow: 5px 5px 10px hexadecimal(#2c3e50);
+ }
+ 
+ 
+ 
+ .tort {
+ 
+ position:absolute;
+ left:6000px;
+ width:100px;
+ top:130px;
+ -moz-transform: scaleX(-1);
+ -o-transform: scaleX(-1);
+ -webkit-transform: scaleX(-1);
+ transform: scaleX(-1);
+ filter: FlipH;
+ -ms-filter: 'FlipH';
+ 
+ }
+ 
+ 
+ //FIM MAIN CSS
+ 
+ 
+ 
+ //CSS LEVEL UP
+ 
+ 
+ 
+ .Banner {
+ 
+ width: 100% ;
+ max-weight: 300px ;
+ max-width: ;
+ 
+ }
+ .imagemLevelUp{
+ 
+ weight: 170px;
+ width: 280px;
+ 
+ }
+ 
+ 
+ .pLevel {
+ 
+ color:#f1c40f;
+ font-size: 28px;
+ 
+ }        
+ 
+ p.LevelCompleto {           
+ 
+ color:white;
+ font-size: 30px;
+ font-family: 'Segoe Ui', sans-serif;
+ text-align: center;
+ }     
+ 
+ .body {
+ background-color:#34495e;
+ font-family: 'Oswald', sans-serif;
+ }
+ 
+ p.AreaTextoPoupup  {
+ color: ;
+ font-size: 17px;
+ text-align: center;
+ border: 1pt Groove #666;
+ padding: 3px 3px;
+ 
+ }
+ p.AreaTextoLevel1
+ {
+ color:white;
+ font-size:22px;
+ text-align: center;
+ border: 1pt Dotted white;
+ /*Tipos de borda: Dotted, Dashed, Solid, Double, Groove, Ridge
+ Inset, outset */
+ padding: 7px 7px;
+ /*o primeiro 7px do padding é o espaço da parte de cima/baixo
+ eo segundo 7px é o espaço das laterais*/
+ margin-botton: 5px;
+ 
+ }
+ 
+ 
+ .textBox
+ {
+ height:30px;
+ width:260px;
+ padding: 3px;
+ border: 1px solid #3498db;
+ -moz-border-radius: 8px;
+ -webkit-border-radius: 8px;
+ border-radius: 8px;
+ text-align: center;
+ position: relative;
+ float: right;
+ right: 33px;
+ 
+ }
+ 
+ .button
+ {
+ padding: 1px 11px;
+ 
+ border: 1px solid #3498db;
+ -moz-border-radius: 8px;
+ -webkit-border-radius: 8px;
+ border-radius: 8px;
+ /*Os três valores do border determinam, respectivamente: a borda do
+ span deverá ter 1 pixel de espessura; será sólido; será na cor
+ hexadecimal */
+ 
+ background-color: #3498db !important;
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3498db), color-stop(100%,#3498db)) !important;
+ background: -webkit-linear-gradient(top, #3498db, #3498db) !important;
+ /*o segundo #3498db é para ter outra cor que vai ficar meio q na metade do botão*/
+ background: -moz-linear-gradient(top, #3498db, #3498db) !important;
+ background: -ms-linear-gradient(top, #3498db, #3498db) !important;
+ background: -o-linear-gradient(top, #3498db, #3498db) !important;
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3498db', endColorstr='#3498db',GradientType=0 );
+ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmY2MwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjY2MDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+ 
+ font-family:"Segoe UI";
+ font-weight: bold;
+ font-size: 23px;
+ color: #fff;
+ text-shadow: 0 1px 0 #666;
+ 
+ box-shadow: inset 0 1px 1px #fff, 0 2px 3px #666;
+ /*box-shadow é a sombra que tem abaixo do botão*/
+ cursor:pointer;
+ /*cursor pointer é para que apareça à 'maozinha' quando interagir com o mouse no botão!*/
+ position: relative;
+ }
+ 
+ .botao:hover {
+ box-shadow: inset 0 2px 5px #fff, 0 2px 3px #666;
+ background: -webkit-gradient(linear, left top, left bottom, from(#3498db), to(#3498db)) !important;
+ /*Efeito hover de quando passa o mouse em cima do botao*/
+ }
+ 
+ .botao:active {
+ box-shadow: inset 0 2px 5px #fff, 0 1px 3px #666 !important;
+ top:2px
+ /*Efeito active de quando clica no botao*/
+ }
+ .botao a, .botao a:active, .botao a:hover, .botao a:visited { text-decoration:none; color: #fff; text-shadow: 0 1px 0 #666; }
+ /* isso vai ficar assim quando o botao for associado à um link*/
+ 
+ /*style do Box #2 abaixo*/
+ 
+ p.AreaTextoPoupupPro  {
+ color: white;
+ font-size: 20px;
+ text-align: center;
+ padding: 3px 3px;
+ font-family: 'Roboto', sans-serif;
+ color: #95a5a6;
+ 
+ }
+ 
+ .buttonPro
+ {
+ padding: 1px 11px;
+ 
+ border: 1px solid #3498db;
+ -moz-border-radius: 8px;
+ -webkit-border-radius: 8px;
+ border-radius: 8px;
+ /*Os três valores do border determinam, respectivamente: a borda do
+ span deverá ter 1 pixel de espessura; será sólido; será na cor
+ hexadecimal */
+ 
+ background-color: #3498db !important;
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3498db), color-stop(100%,#3498db)) !important;
+ background: -webkit-linear-gradient(top, #3498db, #3498db) !important;
+ /*o segundo #3498db é para ter outra cor que vai ficar meio q na metade do botão*/
+ background: -moz-linear-gradient(top, #3498db, #3498db) !important;
+ background: -ms-linear-gradient(top, #3498db, #3498db) !important;
+ background: -o-linear-gradient(top, #3498db, #3498db) !important;
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3498db', endColorstr='#3498db',GradientType=0 );
+ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmY2MwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjY2MDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+ 
+ font-family:"Segoe UI";
+ font-weight: bold;
+ font-size: 23px;
+ color: #fff;
+ text-shadow: 0 1px 0 #666;
+ 
+ box-shadow: inset 0 1px 1px #fff, 0 2px 3px #666;
+ /*box-shadow é a sombra que tem abaixo do botão*/
+ cursor:pointer;
+ /*cursor pointer é para que apareça à 'maozinha' quando interagir com o mouse no botão!*/
+ position: relative;
+ }
+ 
+ /*style Box#3 abaixo*/
+ 
+ 
+ p.AreaTextoPoupupBT  {
+ color: Green;
+ font-size: 23px;
+ text-align: left;
+ padding: 3px 5px;
+ 
+ }
+ 
+ .buttonBT
+ {
+ padding: 1px 11px;
+ position: relative;
+ border: 1px solid #e74c3c;
+ -moz-border-radius: 8px;
+ -webkit-border-radius: 8px;
+ border-radius: 8px;
+ /*Os três valores do border determinam, respectivamente: a borda do
+ span deverá ter 1 pixel de espessura; será sólido; será na cor
+ hexadecimal */
+ 
+ background-color: #e74c3c !important;
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e74c3c), color-stop(100%,#e74c3c)) !important;
+ background: -webkit-linear-gradient(top, #e74c3c, #e74c3c) !important;
+ /*o segundo #e74c3c é para ter outra cor que vai ficar meio q na metade do botão*/
+ background: -moz-linear-gradient(top, #e74c3c, #e74c3c) !important;
+ background: -ms-linear-gradient(top, #e74c3c, #e74c3c) !important;
+ background: -o-linear-gradient(top, #e74c3c, #e74c3c) !important;
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e74c3c', endColorstr='#e74c3c',GradientType=0 );
+ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmY2MwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjY2MDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+ 
+ font-family:"Segoe UI";
+ font-weight: bold;
+ font-size: 23px;
+ color: #fff;
+ text-shadow: 0 1px 0 #666;
+ 
+ box-shadow: inset 0 1px 1px #fff, 0 2px 3px #666;
+ /*box-shadow é a sombra que tem abaixo do botão*/
+ cursor:pointer;
+ /*cursor pointer é para que apareça à 'maozinha' quando interagir com o mouse no botão!*/
+ position: relative;
+ }
+ 
+ .botao:hover {
+ box-shadow: inset 0 2px 5px #fff, 0 2px 3px #666;
+ background: -webkit-gradient(linear, left top, left bottom, from(#e74c3c), to(#e74c3c)) !important;
+ /*Efeito hover de quando passa o mouse em cima do botao*/
+ }
+ 
+ .botao:active {
+ box-shadow: inset 0 2px 5px #fff, 0 1px 3px #666 !important;
+ top:2px
+ /*Efeito active de quando clica no botao*/
+ }
+ .botao a, .botao a:active, .botao a:hover, .botao a:visited { text-decoration:none; color: #fff; text-shadow: 0 1px 0 #666; }
+ /* isso vai ficar assim quando o botao for associado à um link*/
+ 
+ 
+ 
+ </style>
+ 
+ 
+ <script type="text/javascript">  
+ $(window).load(function(){
+ function collision($div1, $div2) {
+ var x1 = $div1.offset().left;
+ var y1 = $div1.offset().top;
+ var h1 = $div1.outerHeight(true);
+ var w1 = $div1.outerWidth(true);
+ var b1 = y1 + h1;
+ var r1 = x1 + w1;
+ var x2 = $div2.offset().left;
+ var y2 = $div2.offset().top;
+ var h2 = $div2.outerHeight(true);
+ var w2 = $div2.outerWidth(true);
+ var b2 = y2 + h2;
+ var r2 = x2 + w2;
+ 
+ if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2)   return false ;
+ endgame();   return true;
+ }
+ 
+ 
+ window.setInterval(function() {
+ $('.result').text(collision($('#croco1'), $('#div2')));
+ $('.result').text(collision($('#croco2'), $('#div2')));
+ $('.result').text(collision($('#croco3'), $('#div2'))); 
+ $('.result').text(collision($('#enm1'), $('#div2')));
+ $('.result').text(collision($('#enm13'), $('#div2')));  
+ $('.result').text(collision($('#enm14'), $('#div2')));  
+ 
+ $('.result').text(collision($('#enm2'), $('#div2')));  
+ $('.result').text(collision($('#enm3'), $('#div2')));  
+ $('.result').text(collision($('#enm4'), $('#div2')));  
+ $('.result').text(collision($('#enm5'), $('#div2')));  
+ $('.result').text(collision($('#enm6'), $('#div2')));  
+ $('.result').text(collision($('#enm7'), $('#div2')));  
+ $('.result').text(collision($('#enm8'), $('#div2')));  
+ $('.result').text(collision($('#enm10'), $('#div2')));  
+ $('.result').text(collision($('#enm11'), $('#div2')));  
+ $('.result').text(collision($('#enm12'), $('#div2')));  
+ 
+ 
+ }, 200); }); 
+ 
+ 
+ 
+ 
+ 
+ 
+ /*------Get Points--------*/
+ 
+ 
+ 
+ 
+ 
+ $(window).load(function(){
+ function getpointscoin($div1, $div2, coin1) {
+ var ci = coin1;
+ var x1 = $div1.offset().left;
+ var y1 = $div1.offset().top;
+ var h1 = $div1.outerHeight(true);
+ var w1 = $div1.outerWidth(true);
+ var b1 = y1 + h1;
+ var r1 = x1 + w1;
+ var x2 = $div2.offset().left;
+ var y2 = $div2.offset().top;
+ var h2 = $div2.outerHeight(true);
+ var w2 = $div2.outerWidth(true);
+ var b2 = y2 + h2;
+ var r2 = x2 + w2; 
+ if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2)   return false ;
+ addpoint(ci);   return true;
+ }
+ 
+ 
+ window.setInterval(function() {
+ $('.result').text(getpointscoin($('#coin1'), $('#div2'),'#coin1')); 
+ $('.result').text(getpointscoin($('#coin2'), $('#div2'),'#coin2')); 
+ $('.result').text(getpointscoin($('#coin3'), $('#div2'),'#coin3')); 
+ $('.result').text(getpointscoin($('#coin4'), $('#div2'),'#coin4')); 
+ $('.result').text(getpointscoin($('#coin5'), $('#div2'),'#coin5')); 
+ $('.result').text(getpointscoin($('#coin6'), $('#div2'),'#coin6')); 
+ $('.result').text(getpointscoin($('#coin7'), $('#div2'),'#coin7')); 
+ $('.result').text(getpointscoin($('#coin8'), $('#div2'),'#coin8')); 
+ $('.result').text(getpointscoin($('#coin9'), $('#div2'),'#coin9')); 
+ 
+ }, 200); }); 
+ 
+</script>
+
+
+</head>
+
+<!--body onload="stage1moving();yourFunction();"-->
+
+<body onload="carregaSplash()">
+
+<div class="bluesky" id="skydiv"><div id="stage">
+<div class="mudroadtexture"></div>
+<div class="crocodial"  style=" left:2000px;"><div style="position:relative;"><div class="waterwarn200" id="croco1"></div>
+</div></div>
+
+<div class="mudroadtexture" style=" left:2200px; width:800px;"></div>
+
+<div class="mudroadtexture" style=" left:3200px; width:300px;"></div>
+<div class="crocodial"  style=" left:3000px;"><div style="position:relative;"><div class="waterwarn200" id="croco2"></div>
+</div></div>
+
+<!--Fire Box-->
+
+<div style="position:absolute; z-index:111; left:1600px; bottom:70px;" ><div style=" position:relative;"><img src="https://3.bp.blogspot.com/-iWVZshPWcRc/WoTS-GL0aKI/AAAAAAAAASM/m3EHCyyBbJs9H7BXjFWPBlhpNEcXvIMpwCLcBGAs/s1600/fire.gif"/><div style="position:absolute; width:60px; left:20px; top:0px; height:100px;"  id="enm13"></div></div></div>
+
+<div style="position:absolute; z-index:111; left:2350px; bottom:60px;" ><div style=" position:relative;"><img src="https://3.bp.blogspot.com/-iWVZshPWcRc/WoTS-GL0aKI/AAAAAAAAASM/m3EHCyyBbJs9H7BXjFWPBlhpNEcXvIMpwCLcBGAs/s1600/fire.gif"/><div style="position:absolute; width:60px; left:20px; top:0px; height:100px;"  id="enm14"></div></div></div>
+
+
+
+<div class="bridgetexture" style=" left:3500px; width:1900px;"></div>
+<div class="crocodial"  style=" left:5400px;"><div style="position:relative;"><div class="waterwarn200" id="croco3"></div>
+</div></div>
+<div class="mudroadtexture" style=" left:5600px; width:5000px;"></div>
+
+
+<div class="enmybox">
+<div style="position:relative; width:100%; overflow:visible;">  
+<img src="https://4.bp.blogspot.com/-uunI0Sps51U/WoTVvDmvPII/AAAAAAAAASo/ThoMXbs8kWUEO_Ek_qCyRtOMRF6hbj5WwCLcBGAs/s1600/bird1.png" class="bird"      style="position:absolute; left:1000px; bottom:-150px;"  id="enm2"    />
+<img src="https://4.bp.blogspot.com/-uunI0Sps51U/WoTVvDmvPII/AAAAAAAAASo/ThoMXbs8kWUEO_Ek_qCyRtOMRF6hbj5WwCLcBGAs/s1600/bird1.png" class="bird"      style="position:absolute; left:6500px; bottom:-150px;" id="enm4"   />
+<img src="https://4.bp.blogspot.com/-uunI0Sps51U/WoTVvDmvPII/AAAAAAAAASo/ThoMXbs8kWUEO_Ek_qCyRtOMRF6hbj5WwCLcBGAs/s1600/bird1.png" class="bird"     style="position:absolute; left:3500px; bottom:20px;" id="enm1" />
+<img src="https://4.bp.blogspot.com/-uunI0Sps51U/WoTVvDmvPII/AAAAAAAAASo/ThoMXbs8kWUEO_Ek_qCyRtOMRF6hbj5WwCLcBGAs/s1600/bird1.png" class="bird"      style="position:absolute; left:8800px; bottom:70px;"  id="enm3"   />
+
+<img src="https://4.bp.blogspot.com/-uunI0Sps51U/WoTVvDmvPII/AAAAAAAAASo/ThoMXbs8kWUEO_Ek_qCyRtOMRF6hbj5WwCLcBGAs/s1600/bird1.png" class="bird"      style="position:absolute; left:10000px; bottom:-150px;"  id="enm5"   />
+<img src="https://4.bp.blogspot.com/-uunI0Sps51U/WoTVvDmvPII/AAAAAAAAASo/ThoMXbs8kWUEO_Ek_qCyRtOMRF6hbj5WwCLcBGAs/s1600/bird1.png" class="bird"      style="position:absolute; left:12000px; bottom:-150px;"  id="enm6"   />
+<img src="https://4.bp.blogspot.com/-uunI0Sps51U/WoTVvDmvPII/AAAAAAAAASo/ThoMXbs8kWUEO_Ek_qCyRtOMRF6hbj5WwCLcBGAs/s1600/bird1.png" class="bird"      style="position:absolute; left:13500px; bottom:-150px;"  id="enm7"   />
+<img src="https://4.bp.blogspot.com/-uunI0Sps51U/WoTVvDmvPII/AAAAAAAAASo/ThoMXbs8kWUEO_Ek_qCyRtOMRF6hbj5WwCLcBGAs/s1600/bird1.png" class="bird"      style="position:absolute; left:15000px; bottom:60px;"  id="enm8"   /></div>
+
+
+
+<img src="https://4.bp.blogspot.com/-uunI0Sps51U/WoTVvDmvPII/AAAAAAAAASo/ThoMXbs8kWUEO_Ek_qCyRtOMRF6hbj5WwCLcBGAs/s1600/bird1.png" class="bird"      style="position:absolute; left:10100px; bottom:60px;"  id="enm9"   />
+<img src="https://4.bp.blogspot.com/-uunI0Sps51U/WoTVvDmvPII/AAAAAAAAASo/ThoMXbs8kWUEO_Ek_qCyRtOMRF6hbj5WwCLcBGAs/s1600/bird1.png" class="bird"      style="position:absolute; left:12005px; bottom:-150px;"  id="enm10"   />
+<img src="https://4.bp.blogspot.com/-uunI0Sps51U/WoTVvDmvPII/AAAAAAAAASo/ThoMXbs8kWUEO_Ek_qCyRtOMRF6hbj5WwCLcBGAs/s1600/bird1.png" class="bird"      style="position:absolute; left:13500px; bottom:-150px;"  id="enm11"   />
+<img src="https://4.bp.blogspot.com/-uunI0Sps51U/WoTVvDmvPII/AAAAAAAAASo/ThoMXbs8kWUEO_Ek_qCyRtOMRF6hbj5WwCLcBGAs/s1600/bird1.png" class="bird"      style="position:absolute; left:16000px; bottom:94px;"  id="enm12"   />
+
+
+
+
+
+
+
+
+
+
+<img src="https://2.bp.blogspot.com/--8IpejK5zbM/WoTXXrwQXRI/AAAAAAAAATE/yVdwjzqDiB0fn2TupndFniP-24mUcNm9gCLcBGAs/s1600/c1.png" class="runcoin" style="position:absolute; left:1400px; top:100px;" id="coin1" />
+<img src="https://2.bp.blogspot.com/--8IpejK5zbM/WoTXXrwQXRI/AAAAAAAAATE/yVdwjzqDiB0fn2TupndFniP-24mUcNm9gCLcBGAs/s1600/c1.png" class="runcoin" style="position:absolute; left:1450px; top:90px;"  id="coin2"/>
+<img src="https://2.bp.blogspot.com/--8IpejK5zbM/WoTXXrwQXRI/AAAAAAAAATE/yVdwjzqDiB0fn2TupndFniP-24mUcNm9gCLcBGAs/s1600/c1.png" class="runcoin" style="position:absolute; left:1500px; top:80px;"  id="coin3"/>
+
+<img src="https://2.bp.blogspot.com/--8IpejK5zbM/WoTXXrwQXRI/AAAAAAAAATE/yVdwjzqDiB0fn2TupndFniP-24mUcNm9gCLcBGAs/s1600/c1.png" class="runcoin" style="position:absolute; left:2300px; top:0px;" id="coin4" />
+<img src="https://2.bp.blogspot.com/--8IpejK5zbM/WoTXXrwQXRI/AAAAAAAAATE/yVdwjzqDiB0fn2TupndFniP-24mUcNm9gCLcBGAs/s1600/c1.png" class="runcoin" style="position:absolute; left:2350px; top:20px;"  id="coin5"/>
+<img src="https://2.bp.blogspot.com/--8IpejK5zbM/WoTXXrwQXRI/AAAAAAAAATE/yVdwjzqDiB0fn2TupndFniP-24mUcNm9gCLcBGAs/s1600/c1.png" class="runcoin" style="position:absolute; left:2900px; top:30px;"  id="coin6"/>
+
+
+<img src="https://2.bp.blogspot.com/--8IpejK5zbM/WoTXXrwQXRI/AAAAAAAAATE/yVdwjzqDiB0fn2TupndFniP-24mUcNm9gCLcBGAs/s1600/c1.png" class="runcoin" style="position:absolute; left:3900px; top:0px;" id="coin7" />
+<img src="https://2.bp.blogspot.com/--8IpejK5zbM/WoTXXrwQXRI/AAAAAAAAATE/yVdwjzqDiB0fn2TupndFniP-24mUcNm9gCLcBGAs/s1600/c1.png" class="runcoin" style="position:absolute; left:4400px; top:35px;"  id="coin8"/>
+<img src="https://2.bp.blogspot.com/--8IpejK5zbM/WoTXXrwQXRI/AAAAAAAAATE/yVdwjzqDiB0fn2TupndFniP-24mUcNm9gCLcBGAs/s1600/c1.png" class="runcoin" style="position:absolute; left:4450px; top:20px;"  id="coin9"/>
+
+
+
+ 
+
+
+
+
+
+
+
+</div>
+</div>
+ 
+<!--https://3.bp.blogspot.com/-FZ6fRFcKdA4/WoTb_MnAYhI/AAAAAAAAAUU/Cw4XJPlt6BUfeKiMQj7szd-xcIdWgzy9ACLcBGAs/s1600/jump.png-->
+</div> 
+ <img src="https://lh3.googleusercontent.com/-ey7mI8WGezQ/WopIy8uXF0I/AAAAAAAAAVs/rLwyoaiyzsYPwTf5tjLKFndlZCdnjZ81gCHMYCw/s1600/JumpM.png" style="width:; height:; margin-top:; margin-right:; position:absolute; z-index:55555; right:11px;  bottom:12px;"  onclick="player();" />
+
+<div class="grasstree">
+<div style="position:relative;">
+<div class="grass"></div>
+
+</div>
+</div>
+<div class="grasstree">
+<div style="position:relative;">
+<div class="grass"></div> 
+
+
+</div>
+</div>
+
+<div class="seenlayer"><div class="kutubminar"></div></div>
+
+<div class="maintree">
+<div style="position:relative;">
+<div class="tree1"></div> 
+<div class="tree1" style="left:1200px;"></div> 
+<div class="tree1" style="left:1800px;"></div> 
+<div class="tree1" style="left:2600px;"></div> 
+<div class="tree1" style="left:2800px;"></div> 
+<div class="tree1" style="left:7000px;"></div> 
+
+
+<div class="tree2" style="left:1600px;"></div> 
+<div class="tree2" style="left:3500px;"></div> 
+<div class="tree2" style="left:4400px;"></div> 
+<div class="tree2" style="left:520px;"></div> 
+<div class="tree2" style="left:6800px;"></div> 
+
+
+
+</div>
+</div>
+
+
+<div style="position:absolute;    bottom:80px; left:201px; z-index:10000" id="box">
+<div style="position:relative;" id="div2">
+<span  id="changer">
+
+<img src="https://lh3.googleusercontent.com/-YNrVlS35A8c/WoSsXlrek_I/AAAAAAAAAIY/UFGRTGzTZeYzCwFE8R6QOFe7AL7a39PxQCHMYCw/s1600/frame-1.png" data-id="player2"  id="player2"  />
+<img src="https://lh3.googleusercontent.com/-CvU7bn-nucc/WoSzq6Nvm0I/AAAAAAAAAJU/EOaYGLe8IL0D7SgXErs7nOu4e-2kJnIJwCHMYCw/s1600/Jump-up.png"  id="jump"  style="display:none;" />
+
+</span>
+<img src="https://lh3.googleusercontent.com/-AGMOFW_IUoo/WoSzzqqb0nI/AAAAAAAAAJY/qQQ4T__mawg5VlVaVOvRCRgzed3yaB6EQCHMYCw/s1600/Jump-fall.png" style="display:none; position:absolute; bottom:0px; left:0px;" id="endgamer" /></div> 
+
+
+
+</div>
+</div>
+
+
+
+<!--SPLASHSCREEN/BOX-->
+
+<div style="width:100%; margin-top:; position:absolute; width:100%; left:0px; top:0px; z-index:99999999; display:; " id="Splashscreen">
+   <div style="width:538px; height: 826px;  margin:auto; background-color:black; box-shadow:0px 0px 30px #000; padding:31px; text-align:center; ">
+   
+     <img src="https://lh3.googleusercontent.com/-Vixmin7SBoU/Wo3Zdr_Cf9I/AAAAAAAAAYU/b7OPsUpbgTwu-9gzyJ0msfIGVOkfLW-KgCHMYCw/s1600/PicsArt_02-21-04.28.13.png" id="imgSplashimgSplash"width="95%" style="display:none; margin-top:18%;"><br>
+
+     
+   <form style="margin-top:20px;">
+      
+      
+      <p id="DireitosR" style=" display: none; position: relative; margin-top:83%; color:white; font-face:Arial; font-size:2; " >Copyright © 2018 RODRIGO-SILL GAMES All Right Reserved | Group Very crazy<br>Criado por RODRIGO-SILL</p>
+      
+      
+      
+      
+   </form>
+   </div>
+   </div>
+
+ <!--SPLASHSCREEN/BOX-->
+
+
+
+
+<!--Balao mudando? Box-->
+ 
+<div style="width:140%; margin-top:24%; position:fixed; width:100%; left:0px; top:0px; z-index:9999999; display:none; " id="BalaoChanging">
+<div style="width:355px; height:450px; margin:auto; background-color:transparent; padding:10px; text-align:center; ">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<img src="https://lh3.googleusercontent.com/-ayseLPEu8iY/WopIlkh8lII/AAAAAAAAAVo/kqau3_Q6n0gd99z20XSfbkrS4l5bOFkwwCHMYCw/s1600/BalaoMudandoCoisas.png" width="120%" height="" id="balaoPergunta" style="margin-bottom:3%; margin-left:-14%; position: relative; z-index:999999999;">
+
+
+<form style="margin-top:20px;">
+
+</form>
+</div>
+</div>
+
+<!--Balao mudando? Box-->
+
+
+
+<!--Madeira Box Statistics-->
+ 
+<div style="width:140%; margin-top:20%; position:fixed; width:100%; left:0px; top:0px; z-index:99999999; display:none; " id="StatisticsPlayer">
+<div style="width:355px; height:450px; margin:auto; background-color:transparent; padding:10px; text-align:center; ">
+
+<img src="https://lh3.googleusercontent.com/-5VXHtexgaU4/WotM-IHBAMI/AAAAAAAAAXc/4-YChk0zAKgEtkIzV010LM9Iata0xTLKgCHMYCw/s1600/MBase%2528original%2529.png" width="105%" height="470px" style="padding:; z-index:999999999;">
+<img src="https://lh3.googleusercontent.com/-ACpoTacVBqw/WopJH7qPZyI/AAAAAAAAAV8/N91L3KotDWABfQqoApfcKdSzChAQx1FjQCHMYCw/s1600/btnFecharM.png" width="19%" height="26%" Onclick="Mudarestado('StatisticsPlayer'); funcaoBalaoinvisivel();" style="margin-top:-133%; margin-right:-91%; z-index:9999999999; position:relative;"><br>
+<img src="https://3.bp.blogspot.com/-lpH8P1kP5F0/WoS5nM2jmYI/AAAAAAAAAQY/_Hp4RnBfKhwKDLLiQV-IK69x30trYpyYQCLcBGAs/s1600/Img_perfil.png" width="29%" height="34%" Onclick="" style="margin-top:-108%; margin-right:; z-index:9999999999; position:relative;">
+<p style="z-index:9999999999; margin-top:-117%; margin-right:;"class="playerName">MY PROFILE</p>
+<form style="margin-top:20px;">
+
+<br><br><br><br><br><br><br>
+<p align="center"><font color="white" size="3" face="Roboto">Total Coins</font><br>
+      <font color="white" size="3" face="Arial">2347</font><br>
+      <font color="white" size="3" face="Roboto">Atual Coins</font><br>
+      <font color="white" size="3" face="Arial">1213</font><br>
+      <font color="white" size="3" face="Roboto">Highscore</font><br>
+      <font color="white" size="3" face="Arial">4321</font></p>
+      
+<img src ="https://lh3.googleusercontent.com/--uNR3ANgq8U/WopJQxopPNI/AAAAAAAAAWA/cHS_YoGXVAUy79IgTgAIQihWnbEGjc5mQCHMYCw/s1600/ConfigM.png" width="40%" height="36%" Onclick="Mudarestado('madeiraBox')"  style=" margin-top:-6%; margin-left:-40%; position:relative; z-index:9999999999;"><br>
+<img src ="https://lh3.googleusercontent.com/-yXlF4kGd6fw/WopS5yc1qDI/AAAAAAAAAXE/NpoyGS0O0ekjWGT9hrt7Ap5_6ayIiZKGwCHMYCw/s1600/IconFlagbrazil.png" width="10%" height="36%" Onclick="Mudarestado('')"  style=" margin-top:-13%; margin-right:-69%; position:relative; z-index:9999999999;">
+
+</form>
+</div>
+</div>
+
+<!--Madeira Box Statistics-->
+
+
+
+<!--Madeira Box-->
+ 
+<div style="width:140%; margin-top:20%; position:fixed; width:100%; left:0px; top:0px; z-index:999999999; display:none; " id="madeiraBox">
+<div style="width:355px; height:450px; margin:auto; background-color:transparent; padding:10px; text-align:center; ">
+
+<img src="https://lh3.googleusercontent.com/-5VXHtexgaU4/WotM-IHBAMI/AAAAAAAAAXc/4-YChk0zAKgEtkIzV010LM9Iata0xTLKgCHMYCw/s1600/MBase%2528original%2529.png" width="105%" height="470px" style="padding:; z-index:999999999;">
+<img src="https://lh3.googleusercontent.com/-ACpoTacVBqw/WopJH7qPZyI/AAAAAAAAAV8/N91L3KotDWABfQqoApfcKdSzChAQx1FjQCHMYCw/s1600/btnFecharM.png" width="19%" height="26%" Onclick="Mudarestado('madeiraBox')" style="margin-top:-133%; margin-right:-91%; z-index:9999999999; position:relative;"><br>
+
+<p style="z-index:9999999999; margin-top:-117%; margin-right:;"class="playerName">MY CONFIG</p>
+<form style="margin-top:20px;">
+<br><br>
+<input type="button" id="" Onclick="$('#editNickBox').fadeIn(1000);" value="MY NICKNAME" style=" padding:10px; width:44%;  background-color:#f7d794;; color:#FFFFFF; font-size:20px; font-weight:bold; position:relative; right:; top:; border:3px #FFFFFF; border-radius:50px;"><br><br>
+<input type="button" id="" Onclick="Mudarestado('minhaDiv'); Mudarestado('madeiraBox');" value="I PLAY THIS WAY" style=" padding:10px; width:49%;  background-color:#f7d794;; color:#FFFFFF; font-size:20px; font-weight:bold; position:relative; right:; top:; border:3px #FFFFFF; border-radius:50px;">
+ 
+
+
+
+</form>
+</div>
+</div>
+
+<!--Madeira Box-->
+
+
+
+
+<!--Edit nick Box-->
+ 
+<div style="width:140%; margin-top:20%; position:fixed; width:100%; left:0px; top:0px; z-index:9999999999; display:none; " id="editNickBox">
+<div style="width:355px; height:450px; margin:auto; background-color:transparent; padding:10px; text-align:center; ">
+
+<img src="https://lh3.googleusercontent.com/-5VXHtexgaU4/WotM-IHBAMI/AAAAAAAAAXc/4-YChk0zAKgEtkIzV010LM9Iata0xTLKgCHMYCw/s1600/MBase%2528original%2529.png" width="105%" height="470px" id="Mbase" style="padding:; z-index:999999999;">
+<img src="https://lh3.googleusercontent.com/-ACpoTacVBqw/WopJH7qPZyI/AAAAAAAAAV8/N91L3KotDWABfQqoApfcKdSzChAQx1FjQCHMYCw/s1600/btnFecharM.png" width="19%" height="26%" Onclick="Mudarestado('editNickBox')" style="margin-top:-133%; margin-right:-91%; z-index:9999999999; position:relative;"><br>
+
+<p style="z-index:9999999999; margin-top:-117%; margin-right:;"class="playerName">MY CONFIG</p>
+<form style="margin-top:20px;">
+<br><br>
+<p style="z-index:9999999999; position:; color: white; font-size: 22px;">NEW NICK?</p>
+<input type="text" class="" disabled autocomplete="off" id="pni" name="textbox1" value=""  placeholder="" style=" margin-top:16%; z-index:9999999999; height:30px; width:260px; background-color:transparent; padding:3px; border: 1px solid #f7d794; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; text-align: center; position: relative;"/><br><br><b><br>
+
+<input type="button" id="btn_EditingNick" Onclick="editNick()" value="EDIT" style="padding:10px; width:33%;  background-color:#f7d794;; color:#FFFFFF; font-size:20px; font-weight:bold; position:relative; right:; top:; border:3px #FFFFFF; border-radius:50px;">
+
+</form>
+</div>
+</div>
+
+<!--Edit nick Box-->
+
+
+
+<!--PAUSE/BOX-->
+
+<div style="width:100%; margin-top:; position:absolute; width:100%; left:0px; top:0px; z-index:99999999; display:none; " id="pauseBox">
+   <div style="width:538px; height: 826px;  margin:auto; background-color:#34495e; box-shadow:0px 0px 30px #000; padding:31px; text-align:center; ">
+   
+     <img src="https://lh3.googleusercontent.com/-EW3kTOlkA-A/WoS0bEBoSFI/AAAAAAAAAJk/Pi52MVrMH1c36tseb3JoMulF1VHEo4bBQCHMYCw/s1600/coroa.png" width="40%"><br><br>
+     <font color="white" size="8" face="Roboto">EASY COINS</font><br><br><br>
+      
+   <form style="margin-top:20px;">
+      <input type="button" id="" Onclick="ResumeGame()" value="RESUME" style=" padding:10px; width:30%;  background-color:#f7d794; color:#FFFFFF; font-size:25px; font-weight:bold; position:; right:; top:; border:3px #FFFFFF; border-radius:50px;"><br><br>
+      <input type="button" id="btn_Options" Onclick="Mudarestado('customLevelBoxANP')" value="OPTIONS" style=" padding:10px; width:30%;  background-color:#f7d794; color:#FFFFFF; font-size:25px; font-weight:bold; position:; right:; top:; border:3px #FFFFFF; border-radius:50px;"><br><br>
+      <input type="button" id="" Onclick="history.go(0)" value="RESTART" style=" padding:10px; width:30%;  background-color:#f7d794; color:#FFFFFF; font-size:25px; font-weight:bold; position:; right:; top:; border:3px #FFFFFF; border-radius:50px;"><br><br>
+      <input type="button" id="" value="EXIT" style=" padding:10px; width:30%;  background-color:#f7d794; color:#FFFFFF; font-size:25px; font-weight:bold; position:; right:; top:; border:3px #FFFFFF; border-radius:50px;"><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      
+      
+      <font color="white" face="Arial" size="2" >Copyright © 2018 RODRIGO-SILL GAMES All Right Reserved | Group Very crazy<br>Criado por RODRIGO-SILL</font>
+      
+      
+      
+      
+   </form>
+   </div>
+   </div>
+
+ <!--PAUSE/BOX-->
+
+
+
+<!--Game Over Box-->
+ 
+<div style="width:100%; margin-top:10%; position:fixed; width:100%; left:0px; top:0px; z-index:99999999; display:none; " id="gaveoverbox">
+<div style="width:300px;  margin:auto; background-color:#FFFF99; border:5px solid #CC0000; box-shadow:0px 0px 30px #000; border-radius:10px; padding:20px; text-align:center; ">
+
+<h1 class="style1">Game Over</h1>
+<div style="font-size:25px; font-weight:bold; margin-bottom:10px; margin-top:10px;" >Total Score <span id="showscor"></span></div>
+<div style="margin-top:10px; font-size:13px;">Retry Please</div>
+
+
+<form style="margin-top:20px;">
+<input type="submit"  style="background-color:#CC3300; border-radius:10px; padding:10px; color:#FFFFFF; border:2px solid #000; font-size:18px; font-family:Verdana, Arial, Helvetica, sans-serif;" value="Re-Start Game"/>
+</form>
+</div>
+</div>
+
+<!--Game Over Box-->
+
+
+<!--Insert PN Box-->
+
+
+<div style="width:100%; margin-top:0%; position:fixed; width:100%; left:0px; top:0px; z-index:9999999; display:; " id="">
+<div style="width:328px; height: 100px; font-size: 18px; margin:auto; background-color:; padding:; text-align:center;">
+<marquee behavior="scroll"><font size="4" color="white">TIP: Click the option with the "user" symbol and then go to settings and change to difficulty to a higher level to earn more points!</font></marquee>
+<p class="playerName" id="playerName">PLAYER: IGU001</p>
+
+
+
+<form style="margin-top:20px;">
+
+<!--<a href="javascript: mudarImgdifficulty();">
+<!--<a href="javascript: $('#stage').stop();">
+<input type="button" value="test" Onclick="$('#stage').stop();">
+https://4.bp.blogspot.com/-JWawdVHn8to/WoS3xluMRsI/AAAAAAAAAP8/axOQcZD7tR4TnJw17Wd-6_Lz1L7QoJJYgCLcBGAs/s1600/playGame.ico-->
+<img id="img" src="https://lh3.googleusercontent.com/-Htx3dZajOxg/WopJZJNhpwI/AAAAAAAAAWM/-erLk21-xNcmQOVzWma2oVufIBXhD2XtwCHMYCw/s1600/playGameM.png" width="17%" height="36%" Onclick="executefuncoes()" style="position:relative; margin-top:-7%; margin-left:-24%;"><br> <!-- style="background-color:transparent; width:20%; height: 10%; border-radius:10px; padding:10px; color:#E1DADA; border:1px solid #E1DADA; font-size:17px; text-align:center; font-family:Verdana, Arial, Helvetica, sans-serif;" Onclick="InsertPN()" value="PERFIL"/></a>-->
+<img id="" src="https://lh3.googleusercontent.com/-YQx03cS4_Gw/WopI6LyRmjI/AAAAAAAAAVw/32vKefg0ZQYRf7x1BZ3CskeDk515LBEXgCHMYCw/s1600/InfoM.png" width="22%" height="36%" Onclick="Mudarestado('StatisticsPlayer'); Balaoaparece();" style="position:relative; margin-top:-21%; margin-right:-23%;">
+<!--img src="https://3.bp.blogspot.com/-y5OvzdZJL1s/WoS4ttQ9OQI/AAAAAAAAAQM/G_ivQMbuMrooxteR7Z0sDaZnWUQE5vnEwCLcBGAs/s1600/profile_ico.ico" width="15%" height="36%" Onclick="Mudarestado('editBox')"> <!-- style="background-color:transparent; width:20%; height: 10%; border-radius:10px; padding:10px; color:green; border:1px solid green; font-size:18px; font-family:Verdana, Arial, Helvetica, sans-serif;" Onclick="Mudarestado('minhaDiv')-->
+</form>
+</div>
+</div>
+
+<!--<p id+'result"></p>-->
+
+
+<!-- Insert PN Box-->
+
+
+
+<!-- Edit Box
+
+<div style="width:100%; margin-top:4%; position:fixed; width:100%; left:0px; top:0px; z-index:99999999; display:; " id="editBox">
+<div style="width:300px;  margin:auto; background-color:#FFFF99; border:5px solid #CC0000; box-shadow:0px 0px 30px #000; border-radius:10px; padding:10px; text-align:center; ">
+
+<p class="playerName">MY PERFIL</p>
+<img src="https://3.bp.blogspot.com/-lpH8P1kP5F0/WoS5nM2jmYI/AAAAAAAAAQY/_Hp4RnBfKhwKDLLiQV-IK69x30trYpyYQCLcBGAs/s1600/Img_perfil.png" width="37%" height="32%" style="margin-top:;">
+<br>
+
+      <p align="center"><font color="white" size="3" face="Roboto">Total Coins</font><br>
+      <font color="white" size="3" face="Arial">2347</font><br>
+      <font color="white" size="3" face="Roboto">Atual Coins</font><br>
+      <font color="white" size="3" face="Arial">1213</font><br>
+      <font color="white" size="3" face="Roboto">Highscore</font><br>
+      <font color="white" size="3" face="Arial">4321</font></p>
+<form style="margin-top:20px;">
+<!--<span id="cont">50</span> Restantes <br>
+<textarea onkeyup="limite_textarea(this.value)" id="texto"></textarea
+<p align=""><input type="button" class="" id="btn_Mostratxtbox"  Onclick="MostrarTxtbox()" style="background-color:Green; border-radius:10px; padding:10px; color:white; border:2px solid #000; font-size:16px; font-family:Verdana, Arial, Helvetica, sans-serif;" value="Edit Nick"/></p><img src="http://icons.iconarchive.com/icons/hopstarter/sleek-xp-basic/256/Close-2-icon.png" width="10%" height="36%" Onclick="Mudarestado('editBox')"><img src="https://1.bp.blogspot.com/-o_sGtqeC7qI/WoS72zK6DuI/AAAAAAAAAQs/QBOxOeXfI8IADUUr348tSrAZYSyE25d7wCLcBGAs/s1600/config.png" width="10%" height="36%" Onclick="Mudarestado('minhaDiv'); Mudarestado('editBox');">
+<input type="text" class="visivelSNtxtbox" id="pni" name="textbox1" value""  placeholder="New Nick" style=" height:30px; width:260px; background-color:transparent; padding:3px; border: 1px solid #CC0000; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; text-align: center; position: ;"/>
+
+<!--<p align="right"><img src="/storage/emulated/0/THEGAME/Imagens/config.png" width="10%" height="36%" Onclick="Mudarestado('editBox')"></p
+</form>
+</div>
+</div>
+
+<!-- Edit Box-->
+
+
+
+<!--Custom Level Box-->
+ 
+<div style="width:100%; margin-top:10%; position:fixed; width:100%; left:0px; top:0px; z-index:99999999; display:none; " id="minhaDiv">
+<div style="width:300px;  margin:auto; background-color:#FFFF99; border:5px solid #CC0000; box-shadow:0px 0px 30px #000; border-radius:10px; padding:10px; text-align:center; ">
+
+<h1 class="style1">INFO</h1>
+<br><br>
+<font size="3">Select your avatar<font>
+<p align=""><img src="https://lh3.googleusercontent.com/-I2yuqk5BCIM/WoSvDMh2jVI/AAAAAAAAAI4/chYfhQUro7oCcElGuYSqnA2JSpk2yIghgCHMYCw/s1600/frame-4.png" width="45" height="78" style="padding: 6px"> <img src="https://lh3.googleusercontent.com/-I2yuqk5BCIM/WoSvDMh2jVI/AAAAAAAAAI4/chYfhQUro7oCcElGuYSqnA2JSpk2yIghgCHMYCw/s1600/frame-4.png" width="45px" height="78" style="padding: 6px"> <img src="https://lh3.googleusercontent.com/-I2yuqk5BCIM/WoSvDMh2jVI/AAAAAAAAAI4/chYfhQUro7oCcElGuYSqnA2JSpk2yIghgCHMYCw/s1600/frame-4.png" width="45" height="78" style="padding: 6px"></p>
+<font size="3">Select the difficulty</font>
+<br><br>
+<p class="escolheDificuldade" id="N" Onclick="Dificuldade_N_EscolhidaEscolhida()">NORMAL</p><p class="escolheDificuldadeM" id="m" style="font-color:yellow;" Onclick="Dificuldade_m_Escolhida()">MEDIUM</p><p class="escolheDificuldadeH" id="h" Onclick="Dificuldade_h_Escolhida()">HARD</p>
+     <!-- <a href=""<input type="radio" name="difficulty" id="N" value="Normal" checked>Normal</input></a><input type="radio" name="difficulty" id="M" value="Médio" >Medium</input><input type="radio" name="difficulty" id="H" value="Difícil">Hard</input-->
+<form style="margin-top:20px;">
+<a href="javascript: Mudarestado('minhaDiv');">
+<p align=""><input type="button" Onclick="Mudarestado('startGame')" style="background-color:#CC3300; border-radius:10px; padding:10px; color:#FFFFFF; border:2px solid #000; font-size:16px; font-family:Verdana, Arial, Helvetica, sans-serif;" value="NEXT"/></p></a>
+</form>
+</div>
+</div>
+
+<!--Custom Level Box-->
+
+<!--Show info and Start Box-->
+ 
+<div style="width:100%; margin-top:10%; position:fixed; width:100%; left:0px; top:0px; z-index:99999999; display:none; " id="startGame">
+<div style="width:300px;  margin:auto; background-color:#FFFF99; border:5px solid #CC0000; box-shadow:0px 0px 30px #000; border-radius:10px; padding:10px; text-align:center; ">
+
+<h1 class="style1">INFO</h1>
+<br><br>
+<font size="3">YOUR AVATAR<font>
+<p align="center"><img src="https://lh3.googleusercontent.com/-I2yuqk5BCIM/WoSvDMh2jVI/AAAAAAAAAI4/chYfhQUro7oCcElGuYSqnA2JSpk2yIghgCHMYCw/s1600/frame-4.png" width="45" height="78" style="padding: 1px">
+<br>
+<font size="3">DIFFICULTY</font>
+      <p class="txt_Dificuldade" id="Mydificuldade">NORMAL</p>
+<form style="margin-top:20px;">
+<a href="javascript: Mudarestado('startGame');">
+<p align=""><input type="button" id="fimSI"  Onclick="salvar_Dificuldade()" style="background-color:Green; border-radius:10px; padding:10px; color:white; border:2px solid #000; font-size:16px; font-family:Verdana, Arial, Helvetica, sans-serif;" value="FINALIZAR"/></p></a>
+</form>
+</div>
+</div>
+
+<!--Show info and Start Box-->
+
+
+
+
+
+
+
+
+
+<!--CUSTOM LEVEL BOX ANP-->
+ 
+<div style="width:100%; margin-top:10%; position:fixed; width:100%; left:0px; top:0px; z-index:99999999; display:none; " id="customLevelBoxANP">
+<div style="width:300px;  margin:auto; background-color:#FFFF99; border:5px solid #CC0000; box-shadow:0px 0px 30px #000; border-radius:10px; padding:10px; text-align:center; ">
+
+<h1 class="style1">INFO</h1>
+<br><br>
+<font size="3">Select your avatar<font>
+<p align=""><img src="https://lh3.googleusercontent.com/-I2yuqk5BCIM/WoSvDMh2jVI/AAAAAAAAAI4/chYfhQUro7oCcElGuYSqnA2JSpk2yIghgCHMYCw/s1600/frame-4.png" width="45" height="78" style="padding: 6px"> <img src="https://lh3.googleusercontent.com/-I2yuqk5BCIM/WoSvDMh2jVI/AAAAAAAAAI4/chYfhQUro7oCcElGuYSqnA2JSpk2yIghgCHMYCw/s1600/frame-4.png" width="45px" height="78" style="padding: 6px"> <img src="https://lh3.googleusercontent.com/-I2yuqk5BCIM/WoSvDMh2jVI/AAAAAAAAAI4/chYfhQUro7oCcElGuYSqnA2JSpk2yIghgCHMYCw/s1600/frame-4.png"  width="45" height="78" style="padding: 6px"></p>
+<font size="3">Select the difficulty</font>
+<br><br>
+<p class="escolheDificuldade" id="N" Onclick="Dificuldade_N_EscolhidaANP()">NORMAL</p><p class="escolheDificuldadeM" id="m" style="font-color:yellow;" Onclick="Dificuldade_m_EscolhidaANP()">MEDIUM</p><p class="escolheDificuldadeH" id="h" Onclick="Dificuldade_h_EscolhidaANP()">HARD</p>
+     <!-- <a href=""<input type="radio" name="difficulty" id="N" value="Normal" checked>Normal</input></a><input type="radio" name="difficulty" id="M" value="Médio" >Medium</input><input type="radio" name="difficulty" id="H" value="Difícil">Hard</input-->
+<form style="margin-top:20px;">
+<a href="javascript: Mudarestado('customLevelBoxANP');">
+<p align=""><input type="button" Onclick="Mudarestado('showInfoANP')" style="background-color:#CC3300; border-radius:10px; padding:10px; color:#FFFFFF; border:2px solid #000; font-size:16px; font-family:Verdana, Arial, Helvetica, sans-serif;" value="NEXT"/></p></a>
+</form>
+</div>
+</div>
+
+<!--CUSTOM LEVEL BOX ANP-->
+
+
+
+<!--SHOW INFO/CONFIG APLICADA NA PRÓXIMA PARTIDA-->
+ 
+<div style="width:100%; margin-top:10%; position:fixed; width:100%; left:0px; top:0px; z-index:99999999; display:none; " id="showInfoANP">
+<div style="width:300px;  margin:auto; background-color:#FFFF99; border:5px solid #CC0000; box-shadow:0px 0px 30px #000; border-radius:10px; padding:10px; text-align:center; ">
+
+<h1 class="style1">INFO</h1>
+<br><br>
+<font size="3">YOUR AVATAR<font>
+<p align="center"><img src="https://lh3.googleusercontent.com/-I2yuqk5BCIM/WoSvDMh2jVI/AAAAAAAAAI4/chYfhQUro7oCcElGuYSqnA2JSpk2yIghgCHMYCw/s1600/frame-4.png" width="45" height="78" style="padding: 1px">
+<br>
+<font size="3">DIFFICULTY</font>
+      <p class="txt_Dificuldade" id="MydificuldadeANP">NORMAL</p>
+<form style="margin-top:20px;">
+<a href="javascript: Mudarestado('showInfoANP');">
+<p align=""><input type="button" id="fimSIANP"  Onclick="" style="background-color:Green; border-radius:10px; padding:10px; color:white; border:2px solid #000; font-size:16px; font-family:Verdana, Arial, Helvetica, sans-serif;" value="FINALIZAR"/></p></a>
+<font color="Red">NOTE: The settings will be applied to the next game!</font>
+</form>
+</div>
+</div>
+
+
+<!--SHOW INFO/CONFIG APLICADA NA PRÓXIMA PARTIDA-->
+
+
+
+
+
+
+
+
+<!--Music Player-->
+
+<div style="display:none;">
+<audio controls  autoplay loop="loop"> 
+  <source src="music/stage1.mp3" type="audio/mpeg" >
+Your browser does not support the audio element.
+</audio>
+</div>
+
+
+
+<audio id="player" >
+<source src="music/coin.mp3" type="audio/mpeg" >
+
+</audio>
+<!--Music Player-->
+
+
+
+
+
+<!--Score Box-->
+
+<div id="scoreb" style=" padding:10px; background-color:#CC0000; color:#FFFFFF; font-size:25px; font-weight:bold; position:fixed; right:10px; top:10px; border:5px #FFFFFF; border-radius:50px;" >Score : <span id="doughnuts">0</span></div>
+
+<!--Score Box-->
+
+
+
+<script type="text/javascript">
+
+
+
+
+/*
+$("#").click(function(){
+
+});
+
+
+jQuery(function($){
+$(':radio').change(function(){
+alert ("Codigo função");
+});
+});*/
+
+
+
+var mostraSplash = "SPLASHESG";
+function carregaSplash() {
+
+      window.setTimeout('imgSplashvisivel()', 2000);
+      window.setTimeout('Direitosvisivel()', 2000);
+      window.setTimeout('FechaSplash()', 7000);
+       
+         }
+         
+  function imgSplashvisivel() {
+         
+        $("#imgSplashimgSplash").fadeIn(800)
+        
+        }
+        
+   function Direitosvisivel() {
+   
+        $("#DireitosR").fadeIn(800)
+        
+        }
+        
+    function FechaSplash() {
+        
+        
+        $("#Splashscreen").fadeOut(500)
+      
+        }
+
+
+
+
+$(document).ready(function(){
+$('#go').click(function() {
+funcaoMostrarSNtxtbox()
+});
+});
+
+
+function mostraPB() {
+
+//Mudarestado('pauseBox')
+changeImage()
+
+
+}
+
+
+
+
+//FADE IN/PAUSE BOX
+
+/*$(document).ready(function(){
+$("#img").click(function(){
+
+$("#pauseBox").fadeIn(800); // aparece com delay
+});
+});*/
+
+//FADE IN/PAUSE BOX
+
+
+
+//FADE IN/EDIT BOX
+
+
+$(document).ready(function(){
+$("#fimSI").click(function(){
+//$("#div1").fadeOut(); //aparece rapidamente
+//$("#div2").fadeOut("slow"); //atraso
+$("#madeiraBox").fadeIn(1000); // aparece com delay
+});
+});
+
+//FADE IN/EDITE BOX
+
+function Escondeeb() {
+
+document.getElementById("editBox").style.visibility = "hidden";
+
+}
+
+
+
+function Mostraeb() {
+
+document.getElementById("editBox").style.visibility = "visible";
+
+}
+
+$(document).ready(function(){
+Mudarestado(el)
+});
+
+function Mudarestado(el) {
+var display = document.getElementById(el).style.display;
+if(display == "none")
+document.getElementById(el).style.display = 'block';
+else
+document.getElementById(el).style.display = 'none';
+}
+
+
+
+/*Função Salvar*/
+$(document).ready(function(){
+salvar()
+});
+
+function salvar() {
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+// Store
+localStorage.setItem("text", document.getElementById("playerName").value);
+
+} else {
+document.getElementById("playerName").innerHTML = "Local Storage não suportado";
+}
+}
+
+// Retrieve
+document.getElementById("playerName").innerHTML = localStorage.getItem("text");
+
+
+/*Fim função Salvar*/
+
+
+/*Função execute duas functions*/
+
+
+$(document).ready(function(){
+executefuncoes()
+});
+
+function executefuncoes() {
+
+var cont = 0;
+
+document.getElementById( "img" ).onclick = function() {  
+if(cont == 0)
+{
+changeImage();
+cont += 1;
+}
+else
+{
+changeImage2();
+cont = 0;
+}
+}
+
+}
+
+/*Função mudar image 1&2*/
+
+
+
+$(document).ready(function(){
+ChangeImage()
+});
+
+function changeImage() {
+document.getElementById("img").src="https://lh3.googleusercontent.com/-PiHmEZQxppw/WozabCoRsJI/AAAAAAAAAX0/LlEHfXRAeoobuB5sqBDoWTaxaGQNTlYMQCHMYCw/s1600/ExecutandoGameM.png";
+
+stage1moving()
+
+}
+
+
+
+$(document).ready(function(){
+ChangeImage2()
+});
+
+function changeImage2() {
+document.getElementById("img").src="https://lh3.googleusercontent.com/-QlFbLujTJRM/WozabtpyPsI/AAAAAAAAAX4/LUAxhhl1uZQ43FqaGQyHX4wJ4NxiecwiQCHMYCw/s1600/playGameM.png";
+
+$("#pauseBox").fadeIn(800)
+
+$('#stage').stop()
+$('.grasstree').stop()
+$('.maintree').stop()
+$('.seenlayer').stop()
+$('.enmybox').stop()
+$('').stop()
+$('').stop()
+$('').stop()
+
+}
+
+/*Fim função mudar image 1&2*/
+
+$(document).ready(function(){
+ResumeGame()
+});
+
+function ResumeGame() {
+
+document.getElementById("img").click()
+//stage1moving()
+Mudarestado('pauseBox')
+//document.getElementById("img").src="/storage/emulated/0/THEGAME/Imagens/ExecutandoGame.ico";
+
+}
+
+
+  var estado = false;
+ 
+ 
+
+
+/*
+function limite_textarea(valor) {
+quant = 50;
+total = valor.length;
+if(total <= quant) {
+resto = quant - total;
+document.getElementById('cont').innerHTML = resto;
+} else {
+document.getElementById('texto').value = valor.substr(0,quant);
+}
+}
+
+*/
+
+//FIM JAVASCRIPT DO HTML
+
+$(document).ready(function(){
+InsertPN()
+});
+
+function InsertPN() {
+
+var player;
+player="PLAYER: ";
+
+var nome;
+nome = document.getElementById('pni').value;
+document.getElementById('playerName').innerText = player+ '' +nome
+
+}
+
+
+
+
+function Dificuldade_N_Escolhida() {
+
+
+
+
+
+}
+
+
+$(document).ready(function(){
+Dificuldade_m_Escolhida()
+});
+
+function Dificuldade_m_Escolhida() {
+
+var Medium
+Medium = "MEDIUM";
+
+document.getElementById("Mydificuldade").innerText = Medium
+document.getElementById("Mydificuldade").className = "txt_DificuldadeM";
+salvar_Dificuldade()
+}
+
+
+
+$(document).ready(function(){
+Dificuldade_h_Escolhida()
+});
+
+function Dificuldade_h_Escolhida() {
+
+var Hard
+Hard = "HARD";
+
+document.getElementById("Mydificuldade").innerText = Hard
+document.getElementById("Mydificuldade").className = "txt_DificuldadeH";
+salvar_Dificuldade()
+}
+
+
+
+$(document).ready(function(){
+salvar_Dificuldade()
+});
+
+function salvar_Dificuldade() {
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+// Store
+localStorage.setItem("text", document.getElementById("Mydificuldade").innerText);
+
+} else {
+document.getElementById("Mydificuldade").innerHTML = "Local Storage não suportado";
+}
+}
+
+// Retrieve
+document.getElementById("Mydificuldade").innerHTML = localStorage.getItem("text");
+
+
+
+
+
+
+
+
+
+
+//APLICADA NA PROXIMA
+
+$(document).ready(function(){
+Dificuldade_m_EscolhidaANP()
+ });
+
+function Dificuldade_m_EscolhidaANP() {
+
+var MediumANP
+MediumANP = "MEDIUM";
+
+document.getElementById("MydificuldadeANP").innerText = MediumANP
+document.getElementById("MydificuldadeANP").className = "txt_DificuldadeM";
+salvar_DificuldadeANP()
+}
+
+
+
+$(document).ready(function(){
+Dificuldade_h_EscolhidaANP()
+});
+
+function Dificuldade_h_EscolhidaANP() {
+
+var HardANP
+HardANP = "HARD";
+
+document.getElementById("MydificuldadeANP").innerText = HardANP
+document.getElementById("MydificuldadeANP").className = "txt_DificuldadeH";
+salvar_Dificuldade()
+}
+
+
+
+$(document).ready(function(){
+salvar_DificuldadeANP()
+});
+
+function salvar_DificuldadeANP() {
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+// Store
+localStorage.setItem("text", document.getElementById("MydificuldadeANP").innerText);
+
+} else {
+document.getElementById("MydificuldadeANP").innerHTML = "Local Storage não suportado";
+}
+}
+
+// Retrieve
+document.getElementById("MydificuldadeANP").innerHTML = localStorage.getItem("text");
+
+
+
+//APLICADA NA PROXIMA
+
+
+
+
+
+//PAUSE BOX IMAGE
+
+var image1=new Image()
+image1.src="/storage/emulated/0/THEGAME/Imagens/bt.png"
+var image2=new Image()
+image2.src="/storage/emulated/0/THEGAME/Imagens/coroa2.png"
+
+
+
+
+
+var step=1
+function slideit(){
+document.images.slide.src=eval("image"+step+".src")
+if(step<2)
+step++
+else
+step=1
+setTimeout("slideit()",3000)
+}
+slideit()
+
+
+
+
+
+$(document).ready(function(){
+$("#btn_Exit").click(function(){
+document.getElementById("btn_NO").focus();
+});
+});
+
+
+
+$(document).ready(function(){
+editNick()
+});
+
+function editNick() {
+
+var cont = 0;
+
+document.getElementById( id="btn_EditingNick" ).onclick = function() {  
+if(cont == 0)
+{
+Editing();
+cont += 1;
+}
+else
+{
+Finallyediting();
+cont = 0;
+}
+}
+
+}
+
+
+
+
+$(document).ready(function(){
+Editing()
+});
+
+
+function Editing(){
+
+document.getElementById("pni").disabled = false;
+document.getElementById("btn_EditingNick").value = "FINALLY";
+document.getElementById("pni").focus();
+}
+
+
+
+$(document).ready(function(){
+Finallyediting()
+});
+
+
+function Finallyediting(){
+
+
+if(document.getElementById("pni").value == ""){
+alert('Digite no mínino 5 caracteres');
+document.getElementById("pni").focus();
+}
+else{
+
+document.getElementById("btn_EditingNick").value = "EDIT";
+InsertPN()
+salvar()
+
+}
+
+
+}
+
+
+
+$(document).ready(function(){
+Balaoaparece()
+});
+
+function Balaoaparece() {
+
+        window.setTimeout('funcaoBalaovisivel()', 2000);
+        
+    }
+    
+
+
+$(document).ready(function(){
+funcaoBalaovisivel()
+});
+
+ function funcaoBalaovisivel() {
+  
+     $('#BalaoChanging').fadeIn(800);
+      
+ 
+    }
+    
+
+
+
+$(document).ready(function(){
+funcaoBalaoinvisivel()
+});
+
+function funcaoBalaoinvisivel() {
+
+$('#BalaoChanging').fadeOut(700);
+
+
+}
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

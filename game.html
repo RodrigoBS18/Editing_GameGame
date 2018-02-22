@@ -1,0 +1,1135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Untitled Document</title> 
+<script type="text/javascript" src="js/jquery-1.5.2.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<link href="css/estiloAdd.css" rel="stylesheet" type="text/css" />
+ 
+ 
+</head>
+
+<body onload="carregaSplash()">
+
+<div class="bluesky" id="skydiv"><div id="stage">
+<div class="mudroadtexture"></div>
+<div class="crocodial"  style=" left:2000px;"><div style="position:relative;"><div class="waterwarn200" id="croco1"></div>
+</div></div>
+
+<div class="mudroadtexture" style=" left:2200px; width:800px;"></div>
+
+<div class="mudroadtexture" style=" left:3200px; width:300px;"></div>
+<div class="crocodial"  style=" left:3000px;"><div style="position:relative;"><div class="waterwarn200" id="croco2"></div>
+</div></div>
+
+<!--Fire Box-->
+
+<div style="position:absolute; z-index:111; left:1600px; bottom:70px;" ><div style=" position:relative;"><img src="images/fire.gif"/><div style="position:absolute; width:60px; left:20px; top:0px; height:100px;"  id="enm13"></div></div></div>
+
+<div style="position:absolute; z-index:111; left:2350px; bottom:60px;" ><div style=" position:relative;"><img src="images/fire.gif"/><div style="position:absolute; width:60px; left:20px; top:0px; height:100px;"  id="enm14"></div></div></div>
+
+
+
+<div class="bridgetexture" style=" left:3500px; width:1900px;"></div>
+<div class="crocodial"  style=" left:5400px;"><div style="position:relative;"><div class="waterwarn200" id="croco3"></div>
+</div></div>
+<div class="mudroadtexture" style=" left:5600px; width:5000px;"></div>
+
+
+<div class="enmybox">
+<div style="position:relative; width:100%; overflow:visible;">  
+<img src="images/enm_stage1/bird1.png" class="bird"      style="position:absolute; left:1000px; bottom:-150px;"  id="enm2"    />
+<img src="images/enm_stage1/bird1.png" class="bird"      style="position:absolute; left:6500px; bottom:-150px;" id="enm4"   />
+<img src="images/enm_stage1/bird1.png" class="bird"     style="position:absolute; left:3500px; bottom:20px;" id="enm1" />
+<img src="images/enm_stage1/bird1.png" class="bird"      style="position:absolute; left:8800px; bottom:70px;"  id="enm3"   />
+
+<img src="images/enm_stage1/bird1.png" class="bird"      style="position:absolute; left:10000px; bottom:-150px;"  id="enm5"   />
+<img src="images/enm_stage1/bird1.png" class="bird"      style="position:absolute; left:12000px; bottom:-150px;"  id="enm6"   />
+<img src="images/enm_stage1/bird1.png" class="bird"      style="position:absolute; left:13500px; bottom:-150px;"  id="enm7"   />
+<img src="images/enm_stage1/bird1.png" class="bird"      style="position:absolute; left:15000px; bottom:60px;"  id="enm8"   /></div>
+
+
+
+<img src="images/enm_stage1/bird1.png" class="bird"      style="position:absolute; left:10100px; bottom:60px;"  id="enm9"   />
+<img src="images/enm_stage1/bird1.png" class="bird"      style="position:absolute; left:12005px; bottom:-150px;"  id="enm10"   />
+<img src="images/enm_stage1/bird1.png" class="bird"      style="position:absolute; left:13500px; bottom:-150px;"  id="enm11"   />
+<img src="images/enm_stage1/bird1.png" class="bird"      style="position:absolute; left:16000px; bottom:94px;"  id="enm12"   />
+
+
+
+
+
+
+
+
+
+
+<img src="images/coin/c1.png" class="runcoin" style="position:absolute; left:1400px; top:100px;" id="coin1" />
+<img src="images/coin/c1.png" class="runcoin" style="position:absolute; left:1450px; top:90px;"  id="coin2"/>
+<img src="images/coin/c1.png" class="runcoin" style="position:absolute; left:1500px; top:80px;"  id="coin3"/>
+
+<img src="images/coin/c1.png" class="runcoin" style="position:absolute; left:2300px; top:0px;" id="coin4" />
+<img src="images/coin/c1.png" class="runcoin" style="position:absolute; left:2350px; top:20px;"  id="coin5"/>
+<img src="images/coin/c1.png" class="runcoin" style="position:absolute; left:2900px; top:30px;"  id="coin6"/>
+
+
+<img src="images/coin/c1.png" class="runcoin" style="position:absolute; left:3900px; top:0px;" id="coin7" />
+<img src="images/coin/c1.png" class="runcoin" style="position:absolute; left:4400px; top:35px;"  id="coin8"/>
+<img src="images/coin/c1.png" class="runcoin" style="position:absolute; left:4450px; top:20px;"  id="coin9"/>
+
+
+
+ 
+
+
+
+
+
+
+
+</div>
+</div>
+ 
+
+</div> 
+ <img src="Imagens/jumpM.png"  style="position:absolute; z-index:55555; right:11px;  bottom:12px;"  onclick="player();" />
+
+<div class="grasstree">
+<div style="position:relative;">
+<div class="grass"></div>
+
+</div>
+</div>
+<div class="grasstree">
+<div style="position:relative;">
+<div class="grass"></div> 
+
+
+</div>
+</div>
+
+<div class="seenlayer"><div class="kutubminar"></div></div>
+
+<div class="maintree">
+<div style="position:relative;">
+<div class="tree1"></div> 
+<div class="tree1" style="left:1200px;"></div> 
+<div class="tree1" style="left:1800px;"></div> 
+<div class="tree1" style="left:2600px;"></div> 
+<div class="tree1" style="left:2800px;"></div> 
+<div class="tree1" style="left:7000px;"></div> 
+
+
+<div class="tree2" style="left:1600px;"></div> 
+<div class="tree2" style="left:3500px;"></div> 
+<div class="tree2" style="left:4400px;"></div> 
+<div class="tree2" style="left:520px;"></div> 
+<div class="tree2" style="left:6800px;"></div> 
+
+
+
+</div>
+</div>
+
+
+<div style="position:absolute;    bottom:80px; left:201px; z-index:10000" id="box">
+<div style="position:relative;" id="div2">
+<span  id="changer">
+
+<img src="images/running/frame-1.png"  id="player2"  />
+<img src="images/Jump/Jump-up.png"  id="jump"  style="display:none;" />
+
+</span>
+<img src="images/Jump/Jump-fall.png" style="display:none; position:absolute; bottom:0px; left:0px;" id="endgamer" /></div> 
+
+
+
+</div>
+</div>
+
+
+
+<!--SPLASHSCREEN/BOX-->
+
+<div style="width:100%; margin-top:; position:absolute; width:100%; left:0px; top:0px; z-index:99999999; display:; " id="Splashscreen">
+   <div style="width:538px; height: 826px;  margin:auto; background-color:black; box-shadow:0px 0px 30px #000; padding:31px; text-align:center; ">
+   
+     <img src="Imagens/PicsArt_02-21-04.28.13.png" id="imgSplashimgSplash"width="95%" style="display:none; margin-top:18%;"><br>
+
+     
+   <form style="margin-top:20px;">
+      
+      
+      <p id="DireitosR" style=" display: none; position: relative; margin-top:83%; color:white; font-face:Arial; font-size:2; " >Copyright © 2018 RODRIGO-SILL GAMES All Right Reserved | Group Very crazy<br>Criado por RODRIGO-SILL</p>
+      
+      
+      
+      
+   </form>
+   </div>
+   </div>
+
+ <!--SPLASHSCREEN/BOX-->
+
+
+
+
+
+<!--Balao mudando? Box-->
+ 
+<div style="width:140%; margin-top:24%; position:fixed; width:100%; left:0px; top:0px; z-index:9999999; display:none; " id="BalaoChanging">
+<div style="width:355px; height:450px; margin:auto; background-color:transparent; padding:10px; text-align:center; ">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<img src="Imagens/BalaoMudandoCoisas.png" width="120%" height="" id="balaoPergunta" style="margin-bottom:3%; margin-left:-14%; position: relative; z-index:999999999;">
+
+
+<form style="margin-top:20px;">
+
+</form>
+</div>
+</div>
+
+<!--Balao mudando? Box-->
+
+
+
+
+<!--Madeira Box Statistics-->
+ 
+<div style="width:140%; margin-top:20%; position:fixed; width:100%; left:0px; top:0px; z-index:99999999; display:none; " id="StatisticsPlayer">
+<div style="width:355px; height:450px; margin:auto; background-color:transparent; padding:10px; text-align:center; ">
+
+<img src="Imagens/MBase(original).png" width="105%" height="470px" style="padding:; z-index:999999999;">
+<img src="Imagens/btnFecharM.png" width="19%" height="26%" Onclick="Mudarestado('StatisticsPlayer'); funcaoBalaoinvisivel();" style="margin-top:-133%; margin-right:-91%; z-index:9999999999; position:relative;"><br>
+<img src="Imagens/Img_perfil.png" width="29%" height="34%" Onclick="" style="margin-top:-108%; margin-right:; z-index:9999999999; position:relative;">
+<p style="z-index:9999999999; margin-top:-117%; margin-right:;"class="playerName">MY PROFILE</p>
+<form style="margin-top:20px;">
+
+<br><br><br><br><br><br><br>
+<p align="center"><font color="white" size="3" face="Roboto">Total Coins</font><br>
+      <font color="white" size="3" face="Arial">2347</font><br>
+      <font color="white" size="3" face="Roboto">Atual Coins</font><br>
+      <font color="white" size="3" face="Arial">1213</font><br>
+      <font color="white" size="3" face="Roboto">Highscore</font><br>
+      <font color="white" size="3" face="Arial">4321</font></p>
+      
+<img src ="Imagens/ConfigM.png" width="40%" height="36%" Onclick="Mudarestado('madeiraBox')"  style=" margin-top:-6%; margin-left:-40%; position:relative; z-index:9999999999;"><br>
+<img src ="Imagens/IconFlagbrazil.png" width="10%" height="36%" Onclick="Mudarestado('')"  style=" margin-top:-13%; margin-right:-69%; position:relative; z-index:9999999999;">
+
+</form>
+</div>
+</div>
+
+<!--Madeira Box Statistics-->
+
+
+
+<!--Madeira Box-->
+ 
+<div style="width:140%; margin-top:20%; position:fixed; width:100%; left:0px; top:0px; z-index:999999999; display:none; " id="madeiraBox">
+<div style="width:355px; height:450px; margin:auto; background-color:transparent; padding:10px; text-align:center; ">
+
+<img src="Imagens/MBase(original).png" width="105%" height="470px" style="padding:; z-index:999999999;">
+<img src="Imagens/btnFecharM.png" width="19%" height="26%" Onclick="Mudarestado('madeiraBox')" style="margin-top:-133%; margin-right:-91%; z-index:9999999999; position:relative;"><br>
+
+<p style="z-index:9999999999; margin-top:-117%; margin-right:;"class="playerName">MY CONFIG</p>
+<form style="margin-top:20px;">
+<br><br>
+<input type="button" id="" Onclick="$('#editNickBox').fadeIn(1000);" value="MY NICKNAME" style=" padding:10px; width:44%;  background-color:#f7d794;; color:#FFFFFF; font-size:20px; font-weight:bold; position:relative; right:; top:; border:3px #FFFFFF; border-radius:50px;"><br><br>
+<input type="button" id="" Onclick="Mudarestado('minhaDiv'); Mudarestado('madeiraBox');" value="I PLAY THIS WAY" style=" padding:10px; width:49%;  background-color:#f7d794;; color:#FFFFFF; font-size:20px; font-weight:bold; position:relative; right:; top:; border:3px #FFFFFF; border-radius:50px;">
+ 
+
+
+
+</form>
+</div>
+</div>
+
+<!--Madeira Box-->
+
+
+
+
+<!--Edit nick Box-->
+ 
+<div style="width:140%; margin-top:20%; position:fixed; width:100%; left:0px; top:0px; z-index:9999999999; display:none; " id="editNickBox">
+<div style="width:355px; height:450px; margin:auto; background-color:transparent; padding:10px; text-align:center; ">
+
+<img src="Imagens/MBase(original).png" width="105%" height="470px" id="Mbase" style="padding:; z-index:999999999;">
+<img src="Imagens/btnFecharM.png" width="19%" height="26%" Onclick="Mudarestado('editNickBox')" style="margin-top:-133%; margin-right:-91%; z-index:9999999999; position:relative;"><br>
+
+<p style="z-index:9999999999; margin-top:-117%; margin-right:;"class="playerName">MY CONFIG</p>
+<form style="margin-top:20px;">
+<br><br>
+<p style="z-index:9999999999; position:; color: white; font-size: 22px;">NEW NICK?</p>
+<input type="text" class="" disabled autocomplete="off" id="pni" name="textbox1" value=""  placeholder="" style=" margin-top:16%; z-index:9999999999; height:30px; width:260px; background-color:transparent; padding:3px; border: 1px solid #f7d794; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; text-align: center; position: relative;"/><br><br><b><br>
+
+<input type="button" id="btn_EditingNick" Onclick="editNick()" value="EDIT" style="padding:10px; width:33%;  background-color:#f7d794;; color:#FFFFFF; font-size:20px; font-weight:bold; position:relative; right:; top:; border:3px #FFFFFF; border-radius:50px;">
+
+</form>
+</div>
+</div>
+
+<!--Edit nick Box-->
+
+
+
+
+<!--PAUSE/BOX-->
+
+<div style="width:100%; margin-top:; position:absolute; width:100%; left:0px; top:0px; z-index:99999999; display:none; " id="pauseBox">
+   <div style="width:538px; height: 826px;  margin:auto; background-color:#34495e; box-shadow:0px 0px 30px #000; padding:31px; text-align:center; ">
+   
+     <img src="Imagens/coroa.png" width="40%"><br><br>
+     <font color="white" size="8" face="Roboto">EASY COINS</font><br><br><br>
+      
+   <form style="margin-top:20px;">
+      <input type="button" id="" Onclick="ResumeGame()" value="RESUME" style=" padding:10px; width:30%;  background-color:#f7d794; color:#FFFFFF; font-size:25px; font-weight:bold; position:; right:; top:; border:3px #FFFFFF; border-radius:50px;"><br><br>
+      <input type="button" id="btn_Options" Onclick="Mudarestado('customLevelBoxANP')" value="OPTIONS" style=" padding:10px; width:30%;  background-color:#f7d794; color:#FFFFFF; font-size:25px; font-weight:bold; position:; right:; top:; border:3px #FFFFFF; border-radius:50px;"><br><br>
+      <input type="button" id="" Onclick="history.go(0)" value="RESTART" style=" padding:10px; width:30%;  background-color:#f7d794; color:#FFFFFF; font-size:25px; font-weight:bold; position:; right:; top:; border:3px #FFFFFF; border-radius:50px;"><br><br>
+      <input type="button" id="" value="EXIT" style=" padding:10px; width:30%;  background-color:#f7d794; color:#FFFFFF; font-size:25px; font-weight:bold; position:; right:; top:; border:3px #FFFFFF; border-radius:50px;"><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      
+      
+      <font color="white" face="Arial" size="2" >Copyright © 2018 RODRIGO-SILL GAMES All Right Reserved | Group Very crazy<br>Criado por RODRIGO-SILL</font>
+      
+      
+      
+      
+   </form>
+   </div>
+   </div>
+
+ <!--PAUSE/BOX-->
+
+
+
+<!--Game Over Box-->
+ 
+<div style="width:100%; margin-top:10%; position:fixed; width:100%; left:0px; top:0px; z-index:99999999; display:none; " id="gaveoverbox">
+<div style="width:300px;  margin:auto; background-color:#FFFF99; border:5px solid #CC0000; box-shadow:0px 0px 30px #000; border-radius:10px; padding:20px; text-align:center; ">
+
+<h1 class="style1">Game Over</h1>
+<div style="font-size:25px; font-weight:bold; margin-bottom:10px; margin-top:10px;" >Total Score <span id="showscor"></span></div>
+<div style="margin-top:10px; font-size:13px;">Retry Please</div>
+
+
+<form style="margin-top:20px;">
+<input type="submit"  style="background-color:#CC3300; border-radius:10px; padding:10px; color:#FFFFFF; border:2px solid #000; font-size:18px; font-family:Verdana, Arial, Helvetica, sans-serif;" value="Re-Start Game"/>
+</form>
+</div>
+</div>
+
+<!--Game Over Box-->
+
+
+<!--Insert PN Box-->
+
+
+<div style="width:100%; margin-top:0%; position:fixed; width:100%; left:0px; top:0px; z-index:9999999; display:; " id="">
+<div style="width:328px; height: 100px; font-size: 18px; margin:auto; background-color:; padding:; text-align:center;">
+<marquee behavior="scroll"><font size="4" color="white">TIP: Click the option with the "user" symbol and then go to settings and change to difficulty to a higher level to earn more points!</font></marquee>
+<p class="playerName" id="playerName">PLAYER: IGU001</p>
+
+
+
+<form style="margin-top:20px;">
+
+<!--<a href="javascript: mudarImgdifficulty();">
+<!--<a href="javascript: $('#stage').stop();">
+<input type="button" value="test" Onclick="$('#stage').stop();">
+https://4.bp.blogspot.com/-JWawdVHn8to/WoS3xluMRsI/AAAAAAAAAP8/axOQcZD7tR4TnJw17Wd-6_Lz1L7QoJJYgCLcBGAs/s1600/playGame.ico-->
+<img id="img" src="Imagens/playGameM.png" width="17%" height="36%" Onclick="executefuncoes()" style="position:relative; margin-top:-7%; margin-left:-24%;"><br> <!-- style="background-color:transparent; width:20%; height: 10%; border-radius:10px; padding:10px; color:#E1DADA; border:1px solid #E1DADA; font-size:17px; text-align:center; font-family:Verdana, Arial, Helvetica, sans-serif;" Onclick="InsertPN()" value="PERFIL"/></a>-->
+<img id="" src="Imagens/InfoM.png" width="22%" height="36%" Onclick="Mudarestado('StatisticsPlayer'); Balaoaparece();" style="position:relative; margin-top:-21%; margin-right:-23%;">
+<!--img src="https://3.bp.blogspot.com/-y5OvzdZJL1s/WoS4ttQ9OQI/AAAAAAAAAQM/G_ivQMbuMrooxteR7Z0sDaZnWUQE5vnEwCLcBGAs/s1600/profile_ico.ico" width="15%" height="36%" Onclick="Mudarestado('editBox')"> <!-- style="background-color:transparent; width:20%; height: 10%; border-radius:10px; padding:10px; color:green; border:1px solid green; font-size:18px; font-family:Verdana, Arial, Helvetica, sans-serif;" Onclick="Mudarestado('minhaDiv')-->
+</form>
+</div>
+</div>
+
+<!--<p id+'result"></p>-->
+
+
+<!-- Insert PN Box-->
+
+
+
+<!-- Edit Box
+
+<div style="width:100%; margin-top:4%; position:fixed; width:100%; left:0px; top:0px; z-index:99999999; display:; " id="editBox">
+<div style="width:300px;  margin:auto; background-color:#FFFF99; border:5px solid #CC0000; box-shadow:0px 0px 30px #000; border-radius:10px; padding:10px; text-align:center; ">
+
+<p class="playerName">MY PERFIL</p>
+<img src="https://3.bp.blogspot.com/-lpH8P1kP5F0/WoS5nM2jmYI/AAAAAAAAAQY/_Hp4RnBfKhwKDLLiQV-IK69x30trYpyYQCLcBGAs/s1600/Img_perfil.png" width="37%" height="32%" style="margin-top:;">
+<br>
+
+      <p align="center"><font color="white" size="3" face="Roboto">Total Coins</font><br>
+      <font color="white" size="3" face="Arial">2347</font><br>
+      <font color="white" size="3" face="Roboto">Atual Coins</font><br>
+      <font color="white" size="3" face="Arial">1213</font><br>
+      <font color="white" size="3" face="Roboto">Highscore</font><br>
+      <font color="white" size="3" face="Arial">4321</font></p>
+<form style="margin-top:20px;">
+<!--<span id="cont">50</span> Restantes <br>
+<textarea onkeyup="limite_textarea(this.value)" id="texto"></textarea
+<p align=""><input type="button" class="" id="btn_Mostratxtbox"  Onclick="MostrarTxtbox()" style="background-color:Green; border-radius:10px; padding:10px; color:white; border:2px solid #000; font-size:16px; font-family:Verdana, Arial, Helvetica, sans-serif;" value="Edit Nick"/></p><img src="http://icons.iconarchive.com/icons/hopstarter/sleek-xp-basic/256/Close-2-icon.png" width="10%" height="36%" Onclick="Mudarestado('editBox')"><img src="https://1.bp.blogspot.com/-o_sGtqeC7qI/WoS72zK6DuI/AAAAAAAAAQs/QBOxOeXfI8IADUUr348tSrAZYSyE25d7wCLcBGAs/s1600/config.png" width="10%" height="36%" Onclick="Mudarestado('minhaDiv'); Mudarestado('editBox');">
+<input type="text" class="visivelSNtxtbox" id="pni" name="textbox1" value""  placeholder="New Nick" style=" height:30px; width:260px; background-color:transparent; padding:3px; border: 1px solid #CC0000; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; text-align: center; position: ;"/>
+
+<!--<p align="right"><img src="/storage/emulated/0/THEGAME/Imagens/config.png" width="10%" height="36%" Onclick="Mudarestado('editBox')"></p
+</form>
+</div>
+</div>
+
+<!-- Edit Box-->
+
+
+
+<!--Custom Level Box-->
+ 
+<div style="width:100%; margin-top:10%; position:fixed; width:100%; left:0px; top:0px; z-index:99999999; display:none; " id="minhaDiv">
+<div style="width:300px;  margin:auto; background-color:#FFFF99; border:5px solid #CC0000; box-shadow:0px 0px 30px #000; border-radius:10px; padding:10px; text-align:center; ">
+
+<h1 class="style1">INFO</h1>
+<br><br>
+<font size="3">Select your avatar<font>
+<p align=""><img src="images/running/frame-4.png" width="45" height="78" style="padding: 6px"> <img src="images/running/frame-4.png" width="45px" height="78" style="padding: 6px"> <img src="images/running/frame-4.png" width="45" height="78" style="padding: 6px"></p>
+<font size="3">Select the difficulty</font>
+<br><br>
+<p class="escolheDificuldade" id="N" Onclick="Dificuldade_N_EscolhidaEscolhida()">NORMAL</p><p class="escolheDificuldadeM" id="m" style="font-color:yellow;" Onclick="Dificuldade_m_Escolhida()">MEDIUM</p><p class="escolheDificuldadeH" id="h" Onclick="Dificuldade_h_Escolhida()">HARD</p>
+     <!-- <a href=""<input type="radio" name="difficulty" id="N" value="Normal" checked>Normal</input></a><input type="radio" name="difficulty" id="M" value="Médio" >Medium</input><input type="radio" name="difficulty" id="H" value="Difícil">Hard</input-->
+<form style="margin-top:20px;">
+<a href="javascript: Mudarestado('minhaDiv');">
+<p align=""><input type="button" Onclick="Mudarestado('startGame')" style="background-color:#CC3300; border-radius:10px; padding:10px; color:#FFFFFF; border:2px solid #000; font-size:16px; font-family:Verdana, Arial, Helvetica, sans-serif;" value="NEXT"/></p></a>
+</form>
+</div>
+</div>
+
+<!--Custom Level Box-->
+
+<!--Show info and Start Box-->
+ 
+<div style="width:100%; margin-top:10%; position:fixed; width:100%; left:0px; top:0px; z-index:99999999; display:none; " id="startGame">
+<div style="width:300px;  margin:auto; background-color:#FFFF99; border:5px solid #CC0000; box-shadow:0px 0px 30px #000; border-radius:10px; padding:10px; text-align:center; ">
+
+<h1 class="style1">INFO</h1>
+<br><br>
+<font size="3">YOUR AVATAR<font>
+<p align="center"><img src="images/running/frame-4.png" width="45" height="78" style="padding: 1px">
+<br>
+<font size="3">DIFFICULTY</font>
+      <p class="txt_Dificuldade" id="Mydificuldade">NORMAL</p>
+<form style="margin-top:20px;">
+<a href="javascript: Mudarestado('startGame');">
+<p align=""><input type="button" id="fimSI"  Onclick="salvar_Dificuldade()" style="background-color:Green; border-radius:10px; padding:10px; color:white; border:2px solid #000; font-size:16px; font-family:Verdana, Arial, Helvetica, sans-serif;" value="FINALIZAR"/></p></a>
+</form>
+</div>
+</div>
+
+<!--Show info and Start Box-->
+
+
+
+
+
+
+
+
+
+<!--CUSTOM LEVEL BOX ANP-->
+ 
+<div style="width:100%; margin-top:10%; position:fixed; width:100%; left:0px; top:0px; z-index:99999999; display:none; " id="customLevelBoxANP">
+<div style="width:300px;  margin:auto; background-color:#FFFF99; border:5px solid #CC0000; box-shadow:0px 0px 30px #000; border-radius:10px; padding:10px; text-align:center; ">
+
+<h1 class="style1">INFO</h1>
+<br><br>
+<font size="3">Select your avatar<font>
+<p align=""><img src="images/running/frame-4.png" width="45" height="78" style="padding: 6px"> <img src="images/running/frame-4.png" width="45px" height="78" style="padding: 6px"> <img src="images/running/frame-4.png"  width="45" height="78" style="padding: 6px"></p>
+<font size="3">Select the difficulty</font>
+<br><br>
+<p class="escolheDificuldade" id="N" Onclick="Dificuldade_N_EscolhidaANP()">NORMAL</p><p class="escolheDificuldadeM" id="m" style="font-color:yellow;" Onclick="Dificuldade_m_EscolhidaANP()">MEDIUM</p><p class="escolheDificuldadeH" id="h" Onclick="Dificuldade_h_EscolhidaANP()">HARD</p>
+     <!-- <a href=""<input type="radio" name="difficulty" id="N" value="Normal" checked>Normal</input></a><input type="radio" name="difficulty" id="M" value="Médio" >Medium</input><input type="radio" name="difficulty" id="H" value="Difícil">Hard</input-->
+<form style="margin-top:20px;">
+<a href="javascript: Mudarestado('customLevelBoxANP');">
+<p align=""><input type="button" Onclick="Mudarestado('showInfoANP')" style="background-color:#CC3300; border-radius:10px; padding:10px; color:#FFFFFF; border:2px solid #000; font-size:16px; font-family:Verdana, Arial, Helvetica, sans-serif;" value="NEXT"/></p></a>
+</form>
+</div>
+</div>
+
+<!--CUSTOM LEVEL BOX ANP-->
+
+
+
+<!--SHOW INFO/CONFIG APLICADA NA PRÓXIMA PARTIDA-->
+ 
+<div style="width:100%; margin-top:10%; position:fixed; width:100%; left:0px; top:0px; z-index:99999999; display:none; " id="showInfoANP">
+<div style="width:300px;  margin:auto; background-color:#FFFF99; border:5px solid #CC0000; box-shadow:0px 0px 30px #000; border-radius:10px; padding:10px; text-align:center; ">
+
+<h1 class="style1">INFO</h1>
+<br><br>
+<font size="3">YOUR AVATAR<font>
+<p align="center"><img src="images/running/frame-4.png" width="45" height="78" style="padding: 1px">
+<br>
+<font size="3">DIFFICULTY</font>
+      <p class="txt_Dificuldade" id="MydificuldadeANP">NORMAL</p>
+<form style="margin-top:20px;">
+<a href="javascript: Mudarestado('showInfoANP');">
+<p align=""><input type="button" id="fimSIANP"  Onclick="" style="background-color:Green; border-radius:10px; padding:10px; color:white; border:2px solid #000; font-size:16px; font-family:Verdana, Arial, Helvetica, sans-serif;" value="FINALIZAR"/></p></a>
+<font color="Red">NOTE: The settings will be applied to the next game!</font>
+</form>
+</div>
+</div>
+
+
+<!--SHOW INFO/CONFIG APLICADA NA PRÓXIMA PARTIDA-->
+
+
+
+<!--Music Player-->
+
+<div style="display:none;">
+<audio controls  autoplay loop="loop"> 
+  <source src="music/stage1.mp3" type="audio/mpeg" >
+Your browser does not support the audio element.
+</audio>
+</div>
+
+
+
+<audio id="player" >
+<source src="music/coin.mp3" type="audio/mpeg" >
+
+</audio>
+<!--Music Player-->
+
+
+
+
+
+<!--Score Box-->
+
+<div id="scoreb" style=" padding:10px; background-color:#CC0000; color:#FFFFFF; font-size:25px; font-weight:bold; position:fixed; right:10px; top:10px; border:5px #FFFFFF; border-radius:50px;" >Score : <span id="doughnuts">0</span></div>
+
+<!--Score Box-->
+
+
+<script type="text/javascript">  
+$(window).load(function(){
+function collision($div1, $div2) {
+var x1 = $div1.offset().left;
+var y1 = $div1.offset().top;
+var h1 = $div1.outerHeight(true);
+var w1 = $div1.outerWidth(true);
+var b1 = y1 + h1;
+var r1 = x1 + w1;
+var x2 = $div2.offset().left;
+var y2 = $div2.offset().top;
+var h2 = $div2.outerHeight(true);
+var w2 = $div2.outerWidth(true);
+var b2 = y2 + h2;
+var r2 = x2 + w2;
+
+if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2)   return false ;
+endgame();   return true;
+}
+
+
+window.setInterval(function() {
+$('.result').text(collision($('#croco1'), $('#div2')));
+$('.result').text(collision($('#croco2'), $('#div2')));
+$('.result').text(collision($('#croco3'), $('#div2'))); 
+$('.result').text(collision($('#enm1'), $('#div2')));
+$('.result').text(collision($('#enm13'), $('#div2')));  
+$('.result').text(collision($('#enm14'), $('#div2')));  
+
+$('.result').text(collision($('#enm2'), $('#div2')));  
+$('.result').text(collision($('#enm3'), $('#div2')));  
+$('.result').text(collision($('#enm4'), $('#div2')));  
+$('.result').text(collision($('#enm5'), $('#div2')));  
+$('.result').text(collision($('#enm6'), $('#div2')));  
+$('.result').text(collision($('#enm7'), $('#div2')));  
+$('.result').text(collision($('#enm8'), $('#div2')));  
+$('.result').text(collision($('#enm10'), $('#div2')));  
+$('.result').text(collision($('#enm11'), $('#div2')));  
+$('.result').text(collision($('#enm12'), $('#div2')));  
+
+
+}, 200); }); 
+
+
+
+
+
+
+/*------Get Points--------*/
+
+
+
+
+
+$(window).load(function(){
+function getpointscoin($div1, $div2, coin1) {
+var ci = coin1;
+var x1 = $div1.offset().left;
+var y1 = $div1.offset().top;
+var h1 = $div1.outerHeight(true);
+var w1 = $div1.outerWidth(true);
+var b1 = y1 + h1;
+var r1 = x1 + w1;
+var x2 = $div2.offset().left;
+var y2 = $div2.offset().top;
+var h2 = $div2.outerHeight(true);
+var w2 = $div2.outerWidth(true);
+var b2 = y2 + h2;
+var r2 = x2 + w2; 
+if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2)   return false ;
+addpoint(ci);   return true;
+}
+
+
+window.setInterval(function() {
+$('.result').text(getpointscoin($('#coin1'), $('#div2'),'#coin1')); 
+$('.result').text(getpointscoin($('#coin2'), $('#div2'),'#coin2')); 
+$('.result').text(getpointscoin($('#coin3'), $('#div2'),'#coin3')); 
+$('.result').text(getpointscoin($('#coin4'), $('#div2'),'#coin4')); 
+$('.result').text(getpointscoin($('#coin5'), $('#div2'),'#coin5')); 
+$('.result').text(getpointscoin($('#coin6'), $('#div2'),'#coin6')); 
+$('.result').text(getpointscoin($('#coin7'), $('#div2'),'#coin7')); 
+$('.result').text(getpointscoin($('#coin8'), $('#div2'),'#coin8')); 
+$('.result').text(getpointscoin($('#coin9'), $('#div2'),'#coin9')); 
+
+}, 200); }); 
+
+
+
+
+/*
+$("#").click(function(){
+
+});
+
+
+jQuery(function($){
+$(':radio').change(function(){
+alert ("Codigo função");
+});
+});*/
+
+var mostraSplash = "SPLASHESG";
+function carregaSplash() {
+
+      window.setTimeout('imgSplashvisivel()', 2000);
+      window.setTimeout('Direitosvisivel()', 2000);
+      window.setTimeout('FechaSplash()', 7000);
+       
+         }
+         
+  function imgSplashvisivel() {
+         
+        $("#imgSplashimgSplash").fadeIn(800)
+        
+        }
+        
+   function Direitosvisivel() {
+   
+        $("#DireitosR").fadeIn(800)
+        
+        }
+        
+    function FechaSplash() {
+        
+        
+        $("#Splashscreen").fadeOut(500)
+      
+        }
+
+
+$(document).ready(function(){
+$('#go').click(function() {
+funcaoMostrarSNtxtbox()
+});
+});
+
+
+function mostraPB() {
+
+//Mudarestado('pauseBox')
+changeImage()
+
+
+}
+
+
+
+
+//FADE IN/PAUSE BOX
+
+/*$(document).ready(function(){
+$("#img").click(function(){
+
+$("#pauseBox").fadeIn(800); // aparece com delay
+});
+});*/
+
+//FADE IN/PAUSE BOX
+
+
+
+//FADE IN/EDIT BOX
+
+
+$(document).ready(function(){
+$("#fimSI").click(function(){
+//$("#div1").fadeOut(); //aparece rapidamente
+//$("#div2").fadeOut("slow"); //atraso
+$("#madeiraBox").fadeIn(1000); // aparece com delay
+});
+});
+
+//FADE IN/EDITE BOX
+
+function Escondeeb() {
+
+document.getElementById("editBox").style.visibility = "hidden";
+
+}
+
+
+
+function Mostraeb() {
+
+document.getElementById("editBox").style.visibility = "visible";
+
+}
+
+$(document).ready(function(){
+Mudarestado(el)
+});
+
+function Mudarestado(el) {
+var display = document.getElementById(el).style.display;
+if(display == "none")
+document.getElementById(el).style.display = 'block';
+else
+document.getElementById(el).style.display = 'none';
+}
+
+
+
+/*Função Salvar*/
+$(document).ready(function(){
+salvar()
+});
+
+function salvar() {
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+// Store
+localStorage.setItem("text", document.getElementById("playerName").value);
+
+} else {
+document.getElementById("playerName").innerHTML = "Local Storage não suportado";
+}
+}
+
+// Retrieve
+document.getElementById("playerName").innerHTML = localStorage.getItem("text");
+
+
+/*Fim função Salvar*/
+
+
+/*Função execute duas functions*/
+
+
+$(document).ready(function(){
+executefuncoes()
+});
+
+function executefuncoes() {
+
+var cont = 0;
+
+document.getElementById( "img" ).onclick = function() {  
+if(cont == 0)
+{
+changeImage();
+cont += 1;
+}
+else
+{
+changeImage2();
+cont = 0;
+}
+}
+
+}
+
+/*Função mudar image 1&2*/
+
+
+
+$(document).ready(function(){
+ChangeImage()
+});
+
+function changeImage() {
+document.getElementById("img").src="Imagens/ExecutandoGameM.png";
+
+stage1moving()
+
+}
+
+
+
+$(document).ready(function(){
+ChangeImage2()
+});
+
+function changeImage2() {
+document.getElementById("img").src="Imagens/playGameM.png";
+
+$("#pauseBox").fadeIn(800)
+
+$('#stage').stop()
+$('.grasstree').stop()
+$('.maintree').stop()
+$('.seenlayer').stop()
+$('.enmybox').stop()
+$('').stop()
+$('').stop()
+$('').stop()
+
+}
+
+/*Fim função mudar image 1&2*/
+
+$(document).ready(function(){
+ResumeGame()
+});
+
+function ResumeGame() {
+
+document.getElementById("img").click()
+//stage1moving()
+Mudarestado('pauseBox')
+//document.getElementById("img").src="/storage/emulated/0/THEGAME/Imagens/ExecutandoGame.ico";
+
+}
+
+
+  var estado = false;
+ 
+ 
+
+
+/*
+function limite_textarea(valor) {
+quant = 50;
+total = valor.length;
+if(total <= quant) {
+resto = quant - total;
+document.getElementById('cont').innerHTML = resto;
+} else {
+document.getElementById('texto').value = valor.substr(0,quant);
+}
+}
+
+*/
+
+//FIM JAVASCRIPT DO HTML
+
+$(document).ready(function(){
+InsertPN()
+});
+
+function InsertPN() {
+
+var player;
+player="PLAYER: ";
+
+var nome;
+nome = document.getElementById('pni').value;
+document.getElementById('playerName').innerText = player+ '' +nome
+
+}
+
+
+
+
+function Dificuldade_N_Escolhida() {
+
+
+
+
+
+}
+
+
+$(document).ready(function(){
+Dificuldade_m_Escolhida()
+});
+
+function Dificuldade_m_Escolhida() {
+
+var Medium
+Medium = "MEDIUM";
+
+document.getElementById("Mydificuldade").innerText = Medium
+document.getElementById("Mydificuldade").className = "txt_DificuldadeM";
+salvar_Dificuldade()
+}
+
+
+
+$(document).ready(function(){
+Dificuldade_h_Escolhida()
+});
+
+function Dificuldade_h_Escolhida() {
+
+var Hard
+Hard = "HARD";
+
+document.getElementById("Mydificuldade").innerText = Hard
+document.getElementById("Mydificuldade").className = "txt_DificuldadeH";
+salvar_Dificuldade()
+}
+
+
+
+$(document).ready(function(){
+salvar_Dificuldade()
+});
+
+function salvar_Dificuldade() {
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+// Store
+localStorage.setItem("text", document.getElementById("Mydificuldade").innerText);
+
+} else {
+document.getElementById("Mydificuldade").innerHTML = "Local Storage não suportado";
+}
+}
+
+// Retrieve
+document.getElementById("Mydificuldade").innerHTML = localStorage.getItem("text");
+
+
+
+
+
+
+
+
+
+
+//APLICADA NA PROXIMA
+
+$(document).ready(function(){
+Dificuldade_m_EscolhidaANP()
+ });
+
+function Dificuldade_m_EscolhidaANP() {
+
+var MediumANP
+MediumANP = "MEDIUM";
+
+document.getElementById("MydificuldadeANP").innerText = MediumANP
+document.getElementById("MydificuldadeANP").className = "txt_DificuldadeM";
+salvar_DificuldadeANP()
+}
+
+
+
+$(document).ready(function(){
+Dificuldade_h_EscolhidaANP()
+});
+
+function Dificuldade_h_EscolhidaANP() {
+
+var HardANP
+HardANP = "HARD";
+
+document.getElementById("MydificuldadeANP").innerText = HardANP
+document.getElementById("MydificuldadeANP").className = "txt_DificuldadeH";
+salvar_Dificuldade()
+}
+
+
+
+$(document).ready(function(){
+salvar_DificuldadeANP()
+});
+
+function salvar_DificuldadeANP() {
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+// Store
+localStorage.setItem("text", document.getElementById("MydificuldadeANP").innerText);
+
+} else {
+document.getElementById("MydificuldadeANP").innerHTML = "Local Storage não suportado";
+}
+}
+
+// Retrieve
+document.getElementById("MydificuldadeANP").innerHTML = localStorage.getItem("text");
+
+
+
+//APLICADA NA PROXIMA
+
+
+
+
+
+//PAUSE BOX IMAGE
+
+var image1=new Image()
+image1.src="/storage/emulated/0/THEGAME/Imagens/bt.png"
+var image2=new Image()
+image2.src="/storage/emulated/0/THEGAME/Imagens/coroa2.png"
+
+
+
+
+
+var step=1
+function slideit(){
+document.images.slide.src=eval("image"+step+".src")
+if(step<2)
+step++
+else
+step=1
+setTimeout("slideit()",3000)
+}
+slideit()
+
+
+
+
+
+$(document).ready(function(){
+$("#btn_Exit").click(function(){
+document.getElementById("btn_NO").focus();
+});
+});
+
+
+
+$(document).ready(function(){
+editNick()
+});
+
+function editNick() {
+
+var cont = 0;
+
+document.getElementById( id="btn_EditingNick" ).onclick = function() {  
+if(cont == 0)
+{
+Editing();
+cont += 1;
+}
+else
+{
+Finallyediting();
+cont = 0;
+}
+}
+
+}
+
+
+
+
+$(document).ready(function(){
+Editing()
+});
+
+
+function Editing(){
+
+document.getElementById("pni").disabled = false;
+document.getElementById("btn_EditingNick").value = "FINALLY";
+document.getElementById("pni").focus();
+}
+
+
+
+$(document).ready(function(){
+Finallyediting()
+});
+
+
+function Finallyediting(){
+
+
+if(document.getElementById("pni").value == ""){
+alert('Digite no mínino 5 caracteres');
+document.getElementById("pni").focus();
+}
+else{
+
+document.getElementById("btn_EditingNick").value = "EDIT";
+InsertPN()
+salvar()
+
+}
+
+
+}
+
+
+
+$(document).ready(function(){
+Balaoaparece()
+});
+
+function Balaoaparece() {
+
+        window.setTimeout('funcaoBalaovisivel()', 2000);
+        
+    }
+    
+
+
+$(document).ready(function(){
+funcaoBalaovisivel()
+});
+
+ function funcaoBalaovisivel() {
+  
+     $('#BalaoChanging').fadeIn(800);
+      
+ 
+    }
+    
+
+
+
+$(document).ready(function(){
+funcaoBalaoinvisivel()
+});
+
+function funcaoBalaoinvisivel() {
+
+$('#BalaoChanging').fadeOut(700);
+
+
+}
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
